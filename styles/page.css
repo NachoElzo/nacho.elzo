@@ -40,6 +40,7 @@ h1, h2, h3 {
   width: 90%; /* Ajuste del ancho */
   max-width: 1300px; /* Ancho máximo */
   max-height: 350px; /* Ancho máximo */
+  min-width: 650px; /* Ancho mínimo */
   margin: 0 auto; /* Centrado automático */
   margin-left: 0%;
 }
@@ -167,17 +168,6 @@ h1, h2, h3 {
 
 .arrow:hover {
   transform: translateY(-50%) scale(1.2); /* Efecto de agrandado */
-}
-
-/* Estilo para imágenes */
-.image {
-  width: 90%;
-  max-height: 150px; /* Limita la altura máxima de la imagen */
-  object-fit: contain;
-  margin: 40px auto 15px auto;
-  display: block;
-  border-radius: 10px;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transición suave */
 }
 
 

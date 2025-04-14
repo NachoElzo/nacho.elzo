@@ -37,8 +37,6 @@ const Page = () => {
         "Soy un profesional especializado en automatización comprometido con ofrecer soluciones de automatizacion eficientes y seguras",
         "Trabajo contigo para optimizar tus procesos y proteger tus aplicaciones, ahorrando tiempo y recursos",
         "Te propongo estrategias personalizadas, alineadas con tus objetivos y necesidades tecnológicas",
-        "Porque tu privacidad es mi prioridad",
-        "Tus datos son manejados de manera exclusiva y confidencial."
       ],
       link: "/CV-Jose-Ignacio-Elzo.pdf" // Reemplaza con la URL real del archivo
       

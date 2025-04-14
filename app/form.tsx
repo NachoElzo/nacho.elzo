@@ -231,32 +231,10 @@ const FormPage = () => {
             <textarea
               id="comentario"
               name="comentario"
-              maxLength={300} // Limitar a 300 caracteres
+              maxLength={300}
               required
               placeholder="Tu comentario debe contener un máximo de 300 caracteres"
-              value={formData.comentario}
-              onChange={(e) => {
-                const { value } = e.target;
-
-                // Actualizar siempre el estado de los errores
-                if (value.length > 300) {
-                  setFieldErrors((prevErrors) => ({
-                    ...prevErrors,
-                    comentario: 'El comentario no puede exceder los 300 caracteres',
-                  }));
-                } else {
-                  setFieldErrors((prevErrors) => {
-                    const newErrors = { ...prevErrors };
-                    delete newErrors.comentario;
-                    return newErrors;
-                  });
-                }
-
-                // Actualizar el estado del formulario solo si no excede el límite
-                if (value.length <= 300) {
-                  handleFieldChange(e);
-                }
-              }}
+              title="Este campo es obligatorio"
             />
             {fieldErrors.comentario && <small className="error-text">{fieldErrors.comentario}</small>}
           </div>

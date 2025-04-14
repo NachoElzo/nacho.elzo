@@ -2,14 +2,10 @@
 @import './page.css'; /* Importar las reglas comunes */
 
 .information-text {
-  color: #4a4a4a; /* Texto gris oscuro */
   margin-bottom: 15px;
   display: block;
   font-style: italic;
-}
-
-.form-fields {
-  color: #3a3a3a; /* Texto gris más oscuro */
+  color: #424242; /* Mismo color que el placeholder */
 }
 
 .form-title {
@@ -23,7 +19,7 @@
   top: 10px;
   right: 10px;
   width: 36%; /* Formulario ocupa el 36% del ancho */
-  height: 100%; /* Ajustar la altura al 100% de la pantalla */
+  height: 96%; /* Ajustar la altura al 100% de la pantalla */
   transition: width 0.3s ease;
   padding: 20px;
   background-color: #e2dac7; /* Fondo ligeramente más claro */
@@ -32,7 +28,6 @@
   overflow-y: auto; /* Habilitar scroll vertical si el contenido es largo */
   border-left: 4px solid;
   border: 4px solid #a5a29c; /* Borde cálido */
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2), -4px -4px 10px rgba(255, 255, 255, 0.8); /* Efecto 3D */
   border-radius: 8px;
 }
 
@@ -64,7 +59,7 @@
 }
 
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 
 .form-container input,
@@ -75,14 +70,14 @@
   margin: 8px 0;
   border: 1px solid #c8bfb0; /* Borde cálido */
   border-radius: 8px;
-  font-size: 16px;
   box-sizing: border-box;
   min-width: 100%;
   -webkit-appearance: none; /* Fix safari styles issues */
   appearance: none;
-  color: #3a3a3a; /* Texto gris más oscuro */
   background-color: #eeecec; /* Fondo cálido más oscuro */
-  
+  font-family: 'ArcadeClassic', monospace; /* Mantener la misma fuente */
+  font-style: italic; /* Aplicar estilo cursiva */
+  color: #424242; /* Mismo color que el placeholder */
 }
 
 /* Estilo para el cuadro de comentarios */
@@ -94,13 +89,19 @@
   margin: 8px 0;
   border: 1px solid #c8bfb0; /* Borde cálido */
   border-radius: 8px;
-  font-size: 16px;
   box-sizing: border-box;
-  color: #3a3a3a; /* Texto gris más oscuro */
-  background-color: #e0d9cc; /* Fondo cálido más oscuro */
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1), -4px -4px 10px rgba(255, 255, 255, 0.7); /* Efecto de profundidad */
+  color: #999; /* Mismo color que el placeholder */
+  background-color: #eeecec; /* Fondo cálido más oscuro */
   resize: vertical; /* Permitir al usuario cambiar el tamaño verticalmente */
-  background-color: #ffffff; /* Fondo cálido más oscuro */
+  font-style: italic; /* Aplicar estilo cursiva */
+  color: #424242; /* Mismo color que el placeholder */
+}
+
+/* Estilo para el placeholder */
+.form-container textarea::placeholder,
+.form-container input::placeholder {
+  color: #999; /* Color gris claro */
+  font-size: 12px; /* Tamaño de fuente */
 }
 
 /* Para eliminar las flechas en navegadores como Chrome, Edge y Safari */
@@ -117,13 +118,8 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .form-container select {
-  color: #3a3a3a; /* Color de texto del dropdown */
   background-color: #e0d9cc; /* Fondo cálido más oscuro */
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1), -4px -4px 10px rgba(255, 255, 255, 0.7); /* Efecto de profundidad */
-}
-
-.form-container select option {
-  color: #3a3a3a; /* Color de las opciones en el dropdown */
 }
 
 .form-container input:focus,
@@ -149,12 +145,12 @@ input[type="number"]::-webkit-inner-spin-button {
   width: 100%;
   font-size: 16px;
   transition: background-color 0.3s ease;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 /* Estilo para el botón habilitado */
 .submit-button.enabled {
-  background-color: #12ab12; /* Verde más intenso */
+  background-color: #0b8f0b; /* Verde más intenso */
   color: #ffffff; /* Texto blanco */
   cursor: pointer; /* Mostrar que el botón es clickeable */
   transition: background-color 0.3s ease;

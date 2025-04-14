@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { sendFormData } from './resources/api/form'; // Importa la función desde form.ts
 import '../styles/form.css';
 import '../styles/page.css';
 
@@ -10,7 +11,7 @@ const FormPage = () => {
     apellido: '',
     telefono: '',
     email: '',
-    comentario: '', // Nuevo campo para comentario
+    comentario: '',
   });
 
   const [errorMessage, setErrorMessage] = useState('');
@@ -26,7 +27,7 @@ const FormPage = () => {
       formData.telefono.trim() !== '' &&
       formData.email.trim() !== '' &&
       formData.comentario.trim() !== '' &&
-      !Object.values(fieldErrors).some((error) => error) // Verifica que no haya errores
+      !Object.values(fieldErrors).some((error) => error)
     );
   };
 
@@ -45,37 +46,24 @@ const FormPage = () => {
       return;
     }
 
-    const formParams = {
-      nombre: formData.nombre,
-      apellido: formData.apellido,
-      telefono: formData.telefono,
-      email: formData.email,
-      comentario: formData.comentario, // Incluir el comentario en los datos enviados
-    };
-
     try {
-      await fetch('https://script.google.com/macros/s/AKfycbwDfXwpEjSou-BosePi07CdD8OduH8wC1Krq1xLij0qCUqbXi2J41xYUVLdWr5DHJcFKw/exec', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formParams),
-        mode: 'no-cors',
-      });
-
-      setFormData({
-        nombre: '',
-        apellido: '',
-        telefono: '',
-        email: '',
-        comentario: '', // Limpiar el campo de comentario
-      });
-
-      setSuccessMessage('Su formulario fue enviado con éxito.');
-      setIsPopupVisible(true);
+      const response = await sendFormData(formData); // Llama a la función importada
+      if (response.success) {
+        setFormData({
+          nombre: '',
+          apellido: '',
+          telefono: '',
+          email: '',
+          comentario: '',
+        });
+        setSuccessMessage('Su formulario fue enviado con éxito.');
+        setIsPopupVisible(true);
+      } else {
+        setErrorMessage('Hubo un error al enviar el formulario.');
+      }
     } catch (error) {
       console.error('Error:', error);
-      setErrorMessage('Hubo un error al enviar el formulario');
+      setErrorMessage('Hubo un error al enviar el formulario.');
     } finally {
       setIsSubmitting(false);
     }
@@ -123,10 +111,10 @@ const FormPage = () => {
         });
       }
     } else if (name === 'comentario') {
-      if (value.length >= 300) {
+      if (value.length >= 150) {
         setFieldErrors((prevErrors) => ({
           ...prevErrors,
-          comentario: 'El comentario no puede exceder los 300 caracteres',
+          comentario: 'El comentario no puede exceder los 150 caracteres',
         }));
       } else {
         setFieldErrors((prevErrors) => {
@@ -154,7 +142,9 @@ const FormPage = () => {
     <div className="form-container">
       <div className="form-card">
         <h1 className="form-title">Formulario de Contacto</h1>
-        <small className="information-text">Complete todos los campos del formulario para poder ofrecerle una atención más personalizada y adecuada a tus necesidades</small>
+        <small className="information-text">
+          Complete todos los campos del formulario para poder ofrecerle una atención más personalizada y adecuada a tus necesidades
+        </small>
         {isPopupVisible && (
           <div className="popup-message">
             <div className="popup-content">
@@ -231,7 +221,7 @@ const FormPage = () => {
             <textarea
               id="comentario"
               name="comentario"
-              maxLength={300}
+              maxLength={150}
               required
               placeholder="Tu comentario debe contener un máximo de 300 caracteres"
               title="Este campo es obligatorio"

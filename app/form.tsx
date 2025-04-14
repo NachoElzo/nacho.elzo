@@ -21,12 +21,12 @@ const FormPage = () => {
 
   const isFormValid = () => {
     return (
-      formData.nombre &&
-      formData.apellido &&
-      formData.telefono &&
-      formData.email &&
-      formData.comentario &&
-      !Object.values(fieldErrors).some((error) => error)
+      formData.nombre.trim() !== '' &&
+      formData.apellido.trim() !== '' &&
+      formData.telefono.trim() !== '' &&
+      formData.email.trim() !== '' &&
+      formData.comentario.trim() !== '' &&
+      !Object.values(fieldErrors).some((error) => error) // Verifica que no haya errores
     );
   };
 
@@ -235,13 +235,15 @@ const FormPage = () => {
               required
               placeholder="Tu comentario debe contener un máximo de 300 caracteres"
               title="Este campo es obligatorio"
+              value={formData.comentario}
+              onChange={handleFieldChange}
             />
             {fieldErrors.comentario && <small className="error-text">{fieldErrors.comentario}</small>}
           </div>
 
           <button
             type="submit"
-            disabled={isSubmitting || !isFormValid()}
+            disabled={isSubmitting || !isFormValid()} // Deshabilitar si el formulario no es válido
             className={`submit-button ${isSubmitting || !isFormValid() ? 'disabled' : 'enabled'}`}
           >
             {isSubmitting ? 'Enviando...' : 'Enviar'}

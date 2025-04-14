@@ -16,6 +16,7 @@ body {
   line-height: 1.6; /* Altura de línea consistente */
   color: #4a4a4a; /* Texto gris oscuro */
   background-color: #e0d9cc; /* Fondo cálido más oscuro */
+  overflow-x: hidden; /* Evitar desbordamiento horizontal */
 }
 
 h1, h2, h3 {
@@ -24,9 +25,10 @@ h1, h2, h3 {
 }
 
 .page {
-  width: 68%;
+  width: 100%; /* Ajustar al 100% del ancho en todas las vistas */
   padding: 20px;
   color: #6e6f5f;
+  box-sizing: border-box; /* Asegura que padding y bordes se incluyan en el tamaño total */
 }
 
 /* Clase común para contenedores como .info-section y .carousel-container */
@@ -37,26 +39,24 @@ h1, h2, h3 {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1), -4px -4px 10px rgba(255, 255, 255, 0.3); /* Efecto de profundidad más sutil */
   transition: all 0.3s ease-in-out; /* Transición suave */
   box-sizing: border-box; /* Asegura que padding y bordes se incluyan en el tamaño total */
-  width: 90%; /* Ajuste del ancho */
-  max-width: 1300px; /* Ancho máximo */
-  max-height: 350px; /* Ancho máximo */
-  min-width: 650px; /* Ancho mínimo */
+  width: 62%; /* Ajustar al 100% del ancho */
   margin: 0 auto; /* Centrado automático */
-  margin-left: 0%;
+  margin-left: 1px;
+  
 }
 
 /* Estilos específicos para .dynamic-text-container */
 .dynamic-text-container {
-  font-size: 1.5rem;
+  font-size: 1.2rem; /* Reducir tamaño de texto */
   font-weight: 800;
   text-align: center;
-  padding: 30px;
+  padding: 20px;
   border: 4px solid #a5a29c; /* Borde cálido */
-  height: 130px;
+  height: auto; /* Ajustar altura automáticamente */
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.2), -1px -1px 5px rgba(255, 255, 255, 0.2); /* Efecto de sombra 3D */
   background-color: #e2dac7; /* Fondo ligeramente más claro */
 }
@@ -78,11 +78,11 @@ h1, h2, h3 {
   letter-spacing: normal;
   font-size: 1rem;
   color: #767480; /* Texto gris medio */
-  padding: 40px 30px;
+  padding: 20px; /* Reducir padding */
   border: 4px solid #a5a29c; /* Borde cálido */
   text-align: left; /* Alinea solo el texto a la izquierda */
   margin-top: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   border-radius: 10px; /* Bordes redondeados */
   position: relative; /* Asegurarse de que las flechas estén dentro del contenedor */
   display: block; /* Cambiar de flex a block para que no afecte la alineación del texto */
@@ -90,25 +90,26 @@ h1, h2, h3 {
 }
 
 .info-section h3 {
-  font-size: 1.2rem;
+  font-size: 1rem; /* Reducir tamaño de subtítulos */
   color: #555; /* Color gris */
-  margin-bottom: -10px;
+  margin-bottom: 10px;
 }
 .info-section h2 {
-  margin-top: -10px;
-  font-size: 1.5rem;
+  margin-top: 10px;
+  font-size: 1.2rem; /* Reducir tamaño de títulos */
 }
 
 .info-section a {
-  display: block;
+  display: inline-block; /* Cambiar a inline-block para que solo ocupe el tamaño del texto */
   font-family: 'ArcadeClassic', monospace; /* Mantener la misma fuente */
-  font-size: 1rem; /* Tamaño grande */
+  font-size: 0.9rem; /* Reducir tamaño de texto */
   font-weight: bold; /* Texto grueso */
   color: rgb(72, 87, 222); /* Color rojo */
   text-align: center; /* Centrar el texto */
   text-decoration: none; /* Eliminar subrayado */
-  margin-top: 20px; /* Espaciado superior */
+  margin-top: 15px; /* Espaciado superior */
   transition: transform 0.3s ease, color 0.3s ease; /* Transición suave */
+  margin-left: 45%;
 }
 
 .info-section a:hover {
@@ -126,10 +127,27 @@ h1, h2, h3 {
 
 /* Media query para hacer el contenedor más pequeño en pantallas más pequeñas */
 @media (max-width: 768px) {
-  .dynamic-text-container, .info-section, .container-common {
-    font-size: 1.8rem; /* Ajustar el tamaño de texto en pantallas más pequeñas */
-    padding: 15px; /* Ajuste de padding */
-    min-height: 300px; /* Ajustar la altura para pantallas más pequeñas */
+  .container-common, .dynamic-text-container, .info-section {
+    font-size: 0.9rem; /* Reducir tamaño de texto */
+    padding: 10px; /* Reducir padding */
+    width: 100%; /* Asegurar que ocupe todo el ancho */
+    margin: 10px auto; /* Ajustar márgenes */
+  }
+
+  .dynamic-text-container {
+    height: auto; /* Ajustar altura automáticamente */
+  }
+
+  .info-section h2 {
+    font-size: 1rem; /* Reducir tamaño de títulos */
+  }
+
+  .info-section h3 {
+    font-size: 0.9rem; /* Reducir tamaño de subtítulos */
+  }
+
+  .arrow {
+    font-size: 1.5rem; /* Reducir tamaño de las flechas */
   }
 }
 
@@ -137,9 +155,9 @@ h1, h2, h3 {
 .slider-container {
   position: relative; /* Asegura que las flechas se posicionen dentro del contenedor */
   z-index: 1; /* Asegura que el slider esté por debajo de las flechas */
-  overflow: visible; /* Permite que las flechas sean visibles fuera del contenedor */
+  overflow: hidden; /* Evitar desbordamiento */
   width: 100%; /* Asegura que ocupe todo el ancho disponible */
-  max-width: 1300px; /* Limitar el ancho máximo */
+  max-width: 100%; /* Limitar el ancho máximo */
   margin: 0 auto; /* Centrar el contenedor */
 }
 
@@ -147,23 +165,24 @@ h1, h2, h3 {
 .arrow {
   margin-top: 10px;
   position: absolute;
-  top: 80%; /* Centrar verticalmente */
+  top: 76%; /* Centrar verticalmente */
   transform: translateY(-50%);
   background-color: transparent;
   border: none;
-  color:  #c97a69;;
-  font-size: 4rem; /* Tamaño de la flecha */
+  color: #c97a69;
+  font-size: 3rem; /* Reducir tamaño de las flechas */
   cursor: pointer;
   transition: color 0.3s ease, transform 0.3s ease; /* Transición suave */
   z-index: 10; /* Asegura que las flechas estén por encima del contenido */
+  
 }
 
 .arrow-left {
-  left: 10px; /* Ajustar posición izquierda */
+  left: 5px; /* Ajustar posición izquierda */
 }
 
 .arrow-right {
-  right: 140px; /* Ajustar posición derecha */
+  right: 39%; /* Ajustar posición derecha como un porcentaje del contenedor */
 }
 
 .arrow:hover {
@@ -198,6 +217,12 @@ h1, h2, h3 {
   }
 
   .arrow-right {
-    right: 55px; /* Ajustar posición derecha en pantallas pequeñas */
+    right: 5%; /* Reducir el espacio derecho en pantallas pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .arrow-right {
+    right: 10px; /* Usar un valor fijo en pantallas muy pequeñas */
   }
 }

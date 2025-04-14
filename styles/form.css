@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Georama:wght@400;600;700&display=swap'); /* Fuente personalizada */
+@import './page.css'; /* Importar las reglas comunes */
+
+.information-text {
+  color: #4a4a4a; /* Texto gris oscuro */
+  margin-bottom: 15px;
+  display: block;
+  font-style: italic;
+}
+
+.form-fields {
+  color: #3a3a3a; /* Texto gris más oscuro */
+}
+
+.form-title {
+  margin-bottom: 25px;
+  padding-top: 2px;
+  margin-top: 2px;
+}
+
+.form-container {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 36%; /* Formulario ocupa el 36% del ancho */
+  height: 100%; /* Ajustar la altura al 100% de la pantalla */
+  transition: width 0.3s ease;
+  padding: 20px;
+  background-color: #e2dac7; /* Fondo ligeramente más claro */
+  box-sizing: border-box;
+  z-index: 9999;
+  overflow-y: auto; /* Habilitar scroll vertical si el contenido es largo */
+  border-left: 4px solid;
+  border: 4px solid #a5a29c; /* Borde cálido */
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2), -4px -4px 10px rgba(255, 255, 255, 0.8); /* Efecto 3D */
+  border-radius: 8px;
+}
+
+/* Hacerlo responsivo */
+@media (max-width: 768px) {
+  .form-container {
+    position: relative; /* Cambiar a relativo para que se posicione debajo */
+    width: calc(100% - 20px); /* Ocupa el 100% del ancho menos un pequeño margen */
+    margin: 0 auto; /* Centrar horizontalmente */
+    padding: 10px; /* Reducir el padding para pantallas pequeñas */
+    min-width: 0; /* Asegurar que no haya un ancho mínimo que cause desbordamiento */
+  }
+
+  .info-container {
+    position: relative; /* Asegurar que las flechas estén dentro del flujo */
+    margin: 0 auto; /* Centrar el contenedor */
+    width: 100%; /* Ajustar el ancho al 100% */
+    padding: 10px; /* Añadir espacio interno */
+  }
+
+  .info-container .arrow {
+    position: absolute; /* Ajustar la posición de las flechas */
+    top: 50%; /* Centrar verticalmente dentro del contenedor */
+    right: 20px; /* Mantener un pequeño margen desde el borde derecho */
+    transform: translateY(-50%); /* Ajustar para centrar perfectamente */
+    max-width: 20px; /* Asegurar que las flechas no sean demasiado grandes */
+    max-height: 20px; /* Ajustar el tamaño máximo */
+  }
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-container input,
+.form-container select {
+  display: block;
+  width: 100%;
+  padding: 12px 12px 18px;
+  margin: 8px 0;
+  border: 1px solid #c8bfb0; /* Borde cálido */
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+  min-width: 100%;
+  -webkit-appearance: none; /* Fix safari styles issues */
+  appearance: none;
+  color: #3a3a3a; /* Texto gris más oscuro */
+  background-color: #eeecec; /* Fondo cálido más oscuro */
+  
+}
+
+/* Estilo para el cuadro de comentarios */
+.form-container textarea {
+  display: block;
+  width: 100%;
+  height: 150px; /* Agrandar el cuadro de comentarios */
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #c8bfb0; /* Borde cálido */
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+  color: #3a3a3a; /* Texto gris más oscuro */
+  background-color: #e0d9cc; /* Fondo cálido más oscuro */
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1), -4px -4px 10px rgba(255, 255, 255, 0.7); /* Efecto de profundidad */
+  resize: vertical; /* Permitir al usuario cambiar el tamaño verticalmente */
+  background-color: #ffffff; /* Fondo cálido más oscuro */
+}
+
+/* Para eliminar las flechas en navegadores como Chrome, Edge y Safari */
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+  appearance: textfield; /* Otros navegadores */
+}
+
+/* Estilos para los navegadores más antiguos */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.form-container select {
+  color: #3a3a3a; /* Color de texto del dropdown */
+  background-color: #e0d9cc; /* Fondo cálido más oscuro */
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1), -4px -4px 10px rgba(255, 255, 255, 0.7); /* Efecto de profundidad */
+}
+
+.form-container select option {
+  color: #3a3a3a; /* Color de las opciones en el dropdown */
+}
+
+.form-container input:focus,
+.form-container select:focus,
+.form-container textarea:focus {
+  border-color: #c8bfb0; /* Borde cálido en focus */
+  outline: none;
+}
+
+.form-container input::placeholder,
+.form-container textarea::placeholder {
+  color: #999;
+  font-size: 12px;
+}
+
+.submit-button {
+  background-color: #0ee515; /* Botón cálido */
+  color: white; /* Texto blanco cuando el botón está habilitado */
+  padding: 15px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-top: 30px;
+}
+
+/* Estilo para el botón habilitado */
+.submit-button.enabled {
+  background-color: #12ab12; /* Verde más intenso */
+  color: #ffffff; /* Texto blanco */
+  cursor: pointer; /* Mostrar que el botón es clickeable */
+  transition: background-color 0.3s ease;
+}
+
+/* Estilo para el botón deshabilitado */
+.submit-button.disabled {
+  background-color: #34d139; /* Verde más claro */
+  color: #ffffff; /* Texto blanco */
+  cursor: not-allowed; /* Mostrar que el botón no es clickeable */
+}
+
+button.submit-button:disabled,
+button.submit-button.disabled {
+  background-color: #61c865; /* Cambiar el color de fondo a un verde más claro */
+  color: #ffffff; /* Asegurar que el texto sea blanco */
+  cursor: not-allowed; /* Mostrar que el botón no es clickeable */
+}
+
+.error-message {
+  color: #ff0000;
+  margin-top: 20px;
+}
+
+.error-text {
+  color: red;
+}
+
+.success-message {
+  color: green;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #e7ffe7;
+  border-radius: 8px;
+}
+
+.popup-content {
+  line-height: 1.2;
+  color: #3a3a3a; /* Texto gris oscuro */
+  background: #f2ede4; /* Fondo cálido más oscuro */
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+.popup-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+.popup-close {
+  background-color: #b8a890; /* Botón cálido más oscuro */
+  color: white;
+  padding: 10px 20px;  /* Aumenta el padding para hacer el botón más grande */
+  font-size: 16px;      /* Aumenta el tamaño del texto */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}

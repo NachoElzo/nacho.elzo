@@ -1,0 +1,231 @@
+@font-face {
+  font-family: 'ArcadeClassic';
+  src: url('/fonts/ArcadeClassic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Fuente personalizada */
+@import url('https://fonts.googleapis.com/css2?family=Georama:wght@400;600;700&display=swap');
+
+/* Fondo general con un degradado cálido */
+body {
+  font-family: 'ArcadeClassic', monospace !important;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6; /* Altura de línea consistente */
+  color: #4a4a4a; /* Texto gris oscuro */
+  background-color: #e0d9cc; /* Fondo cálido más oscuro */
+}
+
+h1, h2, h3 {
+  font-family: 'ArcadeClassic', monospace !important;
+  color: #f35959;
+}
+
+.page {
+  width: 68%;
+  padding: 20px;
+  color: #6e6f5f;
+}
+
+/* Clase común para contenedores como .info-section y .carousel-container */
+.container-common, .dynamic-text-container, .info-section {
+  border-radius: 15px; /* Bordes redondeados */
+  position: relative;
+  overflow: hidden; /* Para que el contenido se recorte de acuerdo con el border-radius */
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1), -4px -4px 10px rgba(255, 255, 255, 0.3); /* Efecto de profundidad más sutil */
+  transition: all 0.3s ease-in-out; /* Transición suave */
+  box-sizing: border-box; /* Asegura que padding y bordes se incluyan en el tamaño total */
+  width: 90%; /* Ajuste del ancho */
+  max-width: 1300px; /* Ancho máximo */
+  margin: 0 auto; /* Centrado automático */
+  margin-left: 0%;
+}
+
+/* Estilos específicos para .dynamic-text-container */
+.dynamic-text-container {
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-align: center;
+  padding: 30px;
+  border: 4px solid #a5a29c; /* Borde cálido */
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.2), -1px -1px 5px rgba(255, 255, 255, 0.2); /* Efecto de sombra 3D */
+  background-color: #e2dac7; /* Fondo ligeramente más claro */
+}
+/* Efecto de hover solo para .dynamic-text-container */
+.dynamic-text-container:hover {
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2), 
+              -6px -6px 15px rgba(255, 255, 255, 0.3); /* Profundidad más sutil */
+  transform: scale(1.03); /* Aumentar tamaño */
+}
+
+/* Efecto de cambio de frase */
+.dynamic-text-container span {
+  display: inline-block;
+  animation: fadeInOut 3s infinite ease-in-out;
+}
+
+/* Estilos comunes para .info-section */
+.info-section {
+  letter-spacing: normal;
+  font-size: 1rem;
+  color: #767480; /* Texto gris medio */
+  padding: 40px 30px;
+  border: 4px solid #a5a29c; /* Borde cálido */
+  text-align: left; /* Alinea solo el texto a la izquierda */
+  margin-top: 20px;
+  margin-bottom: 30px;
+  border-radius: 10px; /* Bordes redondeados */
+  position: relative; /* Asegurarse de que las flechas estén dentro del contenedor */
+  display: block; /* Cambiar de flex a block para que no afecte la alineación del texto */
+  background-color: #e2dac7; /* Fondo ligeramente más claro */
+}
+
+.info-section h3 {
+  font-size: 1.2rem;
+  color: #555; /* Color gris */
+  margin-bottom: -10px;
+}
+.info-section h2 {
+  margin-top: -10px;
+  font-size: 1.5rem;
+  margin-bottom: -10px;
+}
+
+.info-section a {
+  margin-left: 30%;
+}
+
+
+.info-section img {
+  width: 90%;
+  max-height: 150px; /* Limita la altura máxima de la imagen */
+  object-fit: contain;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transición suave */
+}
+
+
+/* Media query para hacerlo responsivo */
+@media (max-width: 1300px) {
+  .dynamic-text-container, .info-section, .container-common {
+    padding: 20px; /* Agrega un poco de padding extra para evitar que el borde se vea mal */
+  }
+}
+
+/* Media query para hacer el contenedor más pequeño en pantallas más pequeñas */
+@media (max-width: 768px) {
+  .dynamic-text-container, .info-section, .container-common {
+    font-size: 1.8rem; /* Ajustar el tamaño de texto en pantallas más pequeñas */
+    padding: 15px; /* Ajuste de padding */
+    min-height: 300px; /* Ajustar la altura para pantallas más pequeñas */
+  }
+}
+
+/* Contenedor del slider */
+.slider-container {
+  position: relative; /* Asegura que las flechas se posicionen dentro del contenedor */
+  z-index: 1; /* Asegura que el slider esté por debajo de las flechas */
+  overflow: visible; /* Permite que las flechas sean visibles fuera del contenedor */
+  width: 100%; /* Asegura que ocupe todo el ancho disponible */
+  max-width: 1300px; /* Limitar el ancho máximo */
+  margin: 0 auto; /* Centrar el contenedor */
+}
+
+/* Estilo base para las flechas */
+.arrow {
+  margin-top: 10px;
+  position: absolute;
+  top: 85%; /* Centrar verticalmente */
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  color:  #c97a69;;
+  font-size: 4rem; /* Tamaño de la flecha */
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease; /* Transición suave */
+  z-index: 10; /* Asegura que las flechas estén por encima del contenido */
+}
+
+.arrow-left {
+  left: 10px; /* Ajustar posición izquierda */
+}
+
+.arrow-right {
+  right: 140px; /* Ajustar posición derecha */
+}
+
+.arrow:hover {
+  transform: translateY(-50%) scale(1.2); /* Efecto de agrandado */
+}
+
+/* Estilo para imágenes */
+.image {
+  width: 90%;
+  max-height: 150px; /* Limita la altura máxima de la imagen */
+  object-fit: contain;
+  margin: 40px auto 15px auto;
+  display: block;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transición suave */
+}
+
+/* Estilo para el enlace de descarga */
+.download-link {
+  display: block;
+  font-family: 'ArcadeClassic', monospace; /* Mantener la misma fuente */
+  font-size: 1rem; /* Tamaño grande */
+  font-weight: bold; /* Texto grueso */
+  color: rgb(72, 87, 222); /* Color rojo */
+  text-align: center; /* Centrar el texto */
+  text-decoration: none; /* Eliminar subrayado */
+  margin-top: 50px; /* Espaciado superior */
+  transition: transform 0.3s ease, color 0.3s ease; /* Transición suave */
+}
+
+.download-link:hover {
+  transform: scale(1.1); /* Efecto de zoom en hover */
+}
+
+/* Estilos generales */
+.information-text {
+  color: #4a4a4a; /* Texto gris oscuro */
+  margin-bottom: 15px;
+  display: block;
+  font-style: italic;
+}
+
+/* Media query para hacerlo responsivo */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px; /* Reducir padding en pantallas pequeñas */
+  }
+
+  .text {
+    font-size: 0.9rem; /* Reducir tamaño de texto en pantallas pequeñas */
+  }
+
+  .arrow {
+    font-size: 2.5rem; /* Reducir tamaño de las flechas */
+  }
+
+  .arrow-left {
+    left: 5px; /* Ajustar posición izquierda en pantallas pequeñas */
+  }
+
+  .arrow-right {
+    right: 55px; /* Ajustar posición derecha en pantallas pequeñas */
+  }
+}

@@ -17,12 +17,11 @@
   overflow-y: auto;
 }
 
-/* Responsivo: Para pantallas pequeñas, el panel se posiciona de forma relativa */
 @media (max-width: 768px) {
   .form-container {
     position: relative;
-    width: calc(100% - 20px);
-    margin: 10px auto;
+    width: 100%;  /* Misma anchura que los otros contenedores */
+    margin-left: 10px;
     max-height: none;
     padding: 10px;
   }

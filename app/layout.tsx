@@ -1,16 +1,22 @@
+import { LanguageProvider } from './context/LanguageContext';
+
 export const metadata = {
-  title: 'José Ignacio Elzo - Contractor',
-  description: 'Portfolio profesional de José Ignacio Elzo, especializado en soluciones informáticas y automatización.',
-}
+  title: 'Nacho Elzo',
+  description: 'Portfolio Nacho Elzo',
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
+      </body>
     </html>
-  )
+  );
 }

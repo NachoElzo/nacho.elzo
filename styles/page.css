@@ -7,20 +7,20 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6; /* Altura de línea consistente */
-  color: #4a4a4a; /* Texto gris oscuro */
-  background-color: #e0d9cc; /* Fondo cálido más oscuro */
+  color: #ffffff; /* Texto gris oscuro */
+  background-color: #111110; /* Fondo cálido más oscuro */
   overflow-x: hidden; /* Evitar desbordamiento horizontal */
 }
 
 h1, h2, h3 {
   font-family: 'ArcadeClassic', monospace !important;
-  color: #f35959;
+  color: #ffffff;
 }
 
 .page {
   width: 100%; /* Ajustar al 100% del ancho en todas las vistas */
   padding: 20px;
-  color: #6e6f5f;
+  color: #ffffff;
   box-sizing: border-box; /* Asegura que padding y bordes se incluyan en el tamaño total */
 }
 
@@ -51,7 +51,7 @@ h1, h2, h3 {
   justify-content: center;
   margin-bottom: 20px;
   text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.2), -1px -1px 5px rgba(255, 255, 255, 0.2); /* Efecto de sombra 3D */
-  background-color: #e2dac7; /* Fondo ligeramente más claro */
+  background-color: #000000; /* Fondo ligeramente más claro */
 }
 /* Efecto de hover solo para .dynamic-text-container */
 .dynamic-text-container:hover {
@@ -70,7 +70,7 @@ h1, h2, h3 {
 .info-section {
   letter-spacing: normal;
   font-size: 1rem;
-  color: #767480; /* Texto gris medio */
+  color: #ffffff; /* Texto gris medio */
   padding: 20px; /* Reducir padding */
   border: 4px solid #a5a29c; /* Borde cálido */
   text-align: left; /* Alinea solo el texto a la izquierda */
@@ -79,12 +79,12 @@ h1, h2, h3 {
   border-radius: 10px; /* Bordes redondeados */
   position: relative; /* Asegurarse de que las flechas estén dentro del contenedor */
   display: block; /* Cambiar de flex a block para que no afecte la alineación del texto */
-  background-color: #e2dac7; /* Fondo ligeramente más claro */
+  background-color: #000000; /* Fondo ligeramente más claro */
 }
 
 .info-section h3 {
   font-size: 1rem; /* Reducir tamaño de subtítulos */
-  color: #555; /* Color gris */
+  color: #ffffff; /* Color gris */
   margin-bottom: 10px;
 }
 .info-section h2 {
@@ -97,7 +97,7 @@ h1, h2, h3 {
   font-family: 'ArcadeClassic', monospace; /* Mantener la misma fuente */
   font-size: 0.9rem; /* Reducir tamaño de texto */
   font-weight: bold; /* Texto grueso */
-  color: rgb(72, 87, 222); /* Color rojo */
+  color: rgb(0, 26, 255); /* Color azul boton descarga */
   text-align: center; /* Centrar el texto */
   text-decoration: none; /* Eliminar subrayado */
   margin-top: 15px; /* Espaciado superior */
@@ -162,7 +162,7 @@ h1, h2, h3 {
   transform: translateY(-50%);
   background-color: transparent;
   border: none;
-  color: #c97a69;
+  color: #ff2f00;
   font-size: 3rem; /* Reducir tamaño de las flechas */
   cursor: pointer;
   transition: color 0.3s ease, transform 0.3s ease; /* Transición suave */
@@ -185,7 +185,7 @@ h1, h2, h3 {
 
 /* Estilos generales */
 .information-text {
-  color: #4a4a4a; /* Texto gris oscuro */
+  color: #ffffff; /* Texto gris oscuro */
   margin-bottom: 15px;
   display: block;
   font-style: italic;

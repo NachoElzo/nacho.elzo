@@ -12,6 +12,7 @@ const translations = {
     informationText:
       "Complete todos los campos del formulario para poder ofrecerle una atención más personalizada y adecuada a tus necesidades",
     nombreLabel: "Nombre *",
+    apellidoLabel: "Apellido *",
     apellidoPlaceholder: "Ej: Pérez",
     emailLabel: "Email *",
     emailPlaceholder: "Ej: usuario@dominio.com",
@@ -21,14 +22,14 @@ const translations = {
     comentarioPlaceholder:
       "Tu comentario debe contener un máximo de 300 caracteres",
     submit: "Enviar",
-    sending: "Enviando...",
-    switchButton: "Switch to English",
+    sending: "Enviando..."
   },
   en: {
     formTitle: "Contact Form",
     informationText:
       "Complete all the fields of the form so we can provide you with more personalized and adequate attention to your needs",
     nombreLabel: "Name *",
+    apellidoLabel: "Last Name *",
     apellidoPlaceholder: "e.g., Pérez",
     emailLabel: "Email *",
     emailPlaceholder: "e.g., user@domain.com",
@@ -38,13 +39,12 @@ const translations = {
     comentarioPlaceholder:
       "Your comment should be at most 300 characters",
     submit: "Submit",
-    sending: "Sending...",
-    switchButton: "Cambiar a Español",
-  },
+    sending: "Sending..."
+  }
 };
 
 const FormPage = () => {
-  const { language, toggleLanguage } = useContext(LanguageContext);
+  const { language } = useContext(LanguageContext);
   const [formData, setFormData] = useState({
     nombre: '',
     apellido: '',
@@ -201,9 +201,6 @@ const FormPage = () => {
   return (
     <div className="form-container">
       <div className="form-card">
-        <button className="language-toggle" onClick={toggleLanguage}>
-          {translations[language].switchButton}
-        </button>
         <h1 className="form-title">{translations[language].formTitle}</h1>
         <small className="information-text">
           {translations[language].informationText}
@@ -234,6 +231,7 @@ const FormPage = () => {
             {fieldErrors.nombre && <small className="error-text">{fieldErrors.nombre}</small>}
           </div>
           <div className="form-group">
+            <label htmlFor="apellido">{translations[language].apellidoLabel}</label>
             <input
               type="text"
               id="apellido"

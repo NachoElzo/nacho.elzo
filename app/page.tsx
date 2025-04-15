@@ -7,10 +7,9 @@ import '../styles/page.css';
 import '../styles/form.css';
 
 const Page = () => {
-  // Ahora solo necesitamos "language" ya que el cambio se realiza en el formulario
-  const { language } = useContext(LanguageContext);
+  const { language, toggleLanguage } = useContext(LanguageContext);
 
-  // Objeto de traducciones global (puedes moverlo a un archivo aparte si lo deseas)
+  // Agregamos la propiedad switchButton para el botón en page.tsx
   const translations = {
     es: {
       phrases: [
@@ -21,6 +20,7 @@ const Page = () => {
         "COMPLETA EL FORMULARIO",
         "TE CONTACTARÉ A LA BREVEDAD."
       ],
+      switchButton: "Switch to English",
       slides: [
         {
           title: "¿ESTÁS BUSCANDO SOLUCIONES EFICIENTES PARA TU PROYECTO INFORMÁTICO?",
@@ -67,6 +67,7 @@ const Page = () => {
         "FILL OUT THE FORM",
         "I WILL CONTACT YOU SOON."
       ],
+      switchButton: "Cambiar a Español",
       slides: [
         {
           title: "ARE YOU LOOKING FOR EFFICIENT SOLUTIONS FOR YOUR IT PROJECT?",
@@ -119,6 +120,11 @@ const Page = () => {
 
   return (
     <div className="page" style={{ position: 'relative' }}>
+      {/* Botón para cambiar idioma implementado en Page */}
+      <button className="language-toggle" onClick={toggleLanguage}>
+        {translations[language].switchButton}
+      </button>
+
       {/* Sección de texto dinámico */}
       <div className="dynamic-text-container">
         <p>{translations[language].phrases[currentPhraseIndex]}</p>
@@ -153,7 +159,9 @@ const Page = () => {
           <button
             className="arrow arrow-left"
             onClick={() =>
-              setCurrentSlideIndex((prevIndex) => (prevIndex - 1 + translations[language].slides.length) % translations[language].slides.length)
+              setCurrentSlideIndex((prevIndex) =>
+                (prevIndex - 1 + translations[language].slides.length) % translations[language].slides.length
+              )
             }
           >
             &#8592;
@@ -192,7 +200,9 @@ const Page = () => {
           <button
             className="arrow arrow-left"
             onClick={() =>
-              setCurrentAppIndex((prevIndex) => (prevIndex - 1 + translations[language].apps.length) % translations[language].apps.length)
+              setCurrentAppIndex((prevIndex) =>
+                (prevIndex - 1 + translations[language].apps.length) % translations[language].apps.length
+              )
             }
           >
             &#8592;
@@ -200,7 +210,9 @@ const Page = () => {
           <button
             className="arrow arrow-right"
             onClick={() =>
-              setCurrentAppIndex((prevIndex) => (prevIndex + 1) % translations[language].apps.length)
+              setCurrentAppIndex((prevIndex) =>
+                (prevIndex + 1) % translations[language].apps.length
+              )
             }
           >
             &#8594;

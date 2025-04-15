@@ -10,7 +10,7 @@
   max-height: 96vh;
   padding: 20px;
   box-sizing: border-box;
-  background-color: #000000; /* Fondo ligeramente más claro */
+  background-color: #000000; /* Fondo ligeramente más oscuro */
   border: 4px solid #a5a29c;
   border-radius: 8px;
   z-index: 9999;
@@ -31,26 +31,12 @@
 /* Tarjeta interna del formulario */
 .form-card {
   position: relative;
-  background-color: #000000; /* Fondo ligeramente más claro */
+  background-color: #000000; /* Fondo ligeramente más oscuro */
   padding: 30px 40px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-/* Botón para cambiar idioma */
-.language-toggle {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 16px;
-  padding: 8px 12px;
-  background-color: #ff0000;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  z-index: 1000;
-}
 
 /* Título e información */
 .form-title {

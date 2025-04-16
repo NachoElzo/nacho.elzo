@@ -7,22 +7,40 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6; /* Altura de línea consistente */
-  color: #ffffff; /* Texto gris oscuro */
-  background-color: #111110; /* Fondo cálido más oscuro */
+  background-color: #232323; /* Fondo cálido más oscuro */
   overflow-x: hidden; /* Evitar desbordamiento horizontal */
 }
 
 h1, h2, h3 {
   font-family: 'ArcadeClassic', monospace !important;
-  color: #ffffff;
+  color: #d8d7d7;
 }
 
 .page {
   width: 100%; /* Ajustar al 100% del ancho en todas las vistas */
   padding: 50px 20px 20px 20px; /* Agrega padding-top para dejar espacio para el botón fijo */
-  color: #ffffff;
+  color: #d8d7d7;
   box-sizing: border-box; /* Asegura que padding y bordes se incluyan en el tamaño total */
 }
+/* Botón para cambiar idioma en Page */
+.language-toggle {
+  position: absolute;
+  top: 15px;
+  left: 25px;
+  margin-bottom: 25px; /* Nuevo margen inferior */
+  font-size: 16px;
+  padding: 4px 8px;
+  background-color:  rgb(239, 11, 11);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+  width: auto;
+  display: inline-block;
+  max-width: fit-content;
+}
+
 
 /* Clase común para contenedores como .info-section y .carousel-container */
 .container-common, .dynamic-text-container, .info-section {
@@ -51,7 +69,7 @@ h1, h2, h3 {
   justify-content: center;
   margin-bottom: 20px;
   text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.2), -1px -1px 5px rgba(255, 255, 255, 0.2); /* Efecto de sombra 3D */
-  background-color: #000000; /* Fondo ligeramente más claro */
+  background: linear-gradient(135deg, #565555, #3a3a3a);
 }
 /* Efecto de hover solo para .dynamic-text-container */
 .dynamic-text-container:hover {
@@ -70,7 +88,7 @@ h1, h2, h3 {
 .info-section {
   letter-spacing: normal;
   font-size: 1rem;
-  color: #ffffff; /* Texto gris medio */
+  color: #d8d7d7; /* Texto gris medio */
   padding: 20px; /* Reducir padding */
   border: 4px solid #a5a29c; /* Borde cálido */
   text-align: left; /* Alinea solo el texto a la izquierda */
@@ -79,12 +97,12 @@ h1, h2, h3 {
   border-radius: 10px; /* Bordes redondeados */
   position: relative; /* Asegurarse de que las flechas estén dentro del contenedor */
   display: block; /* Cambiar de flex a block para que no afecte la alineación del texto */
-  background-color: #000000; /* Fondo ligeramente más claro */
+  background: linear-gradient(135deg, #565555, #3a3a3a);
 }
 
 .info-section h3 {
   font-size: 1rem; /* Reducir tamaño de subtítulos */
-  color: #ffffff; /* Color gris */
+  color: #d8d7d7;/* Color gris */
   margin-bottom: 10px;
 }
 .info-section h2 {
@@ -92,58 +110,19 @@ h1, h2, h3 {
   font-size: 1.2rem; /* Reducir tamaño de títulos */
 }
 
+
+/* MEJORAR 1 */
 .info-section a {
   display: inline-block; /* Cambiar a inline-block para que solo ocupe el tamaño del texto */
   font-family: 'ArcadeClassic', monospace; /* Mantener la misma fuente */
-  font-size: 0.9rem; /* Reducir tamaño de texto */
+  font-size: 1rem; /* Reducir tamaño de texto */
   font-weight: bold; /* Texto grueso */
-  color: rgb(0, 26, 255); /* Color azul boton descarga */
+  color: rgb(0, 4, 255); /* Azul más claro */
   text-align: center; /* Centrar el texto */
   text-decoration: none; /* Eliminar subrayado */
-  margin-top: 15px; /* Espaciado superior */
-  transition: transform 0.3s ease, color 0.3s ease; /* Transición suave */
-  margin-left: 45%;
+  margin-top: 30px; /* Espaciado superior */
+  margin-left: 43%;
 }
-
-.info-section a:hover {
-  transform: scale(1.1); /* Efecto de zoom en hover */
-}
-
-
-
-/* Media query para hacerlo responsivo */
-@media (max-width: 1300px) {
-  .dynamic-text-container, .info-section, .container-common {
-    padding: 20px; /* Agrega un poco de padding extra para evitar que el borde se vea mal */
-  }
-}
-
-/* Media query para hacer el contenedor más pequeño en pantallas más pequeñas */
-@media (max-width: 768px) {
-  .container-common, .dynamic-text-container, .info-section {
-    font-size: 0.9rem; /* Reducir tamaño de texto */
-    padding: 10px; /* Reducir padding */
-    width: 100%; /* Asegurar que ocupe todo el ancho */
-    margin: 10px auto; /* Ajustar márgenes */
-  }
-
-  .dynamic-text-container {
-    height: auto; /* Ajustar altura automáticamente */
-  }
-
-  .info-section h2 {
-    font-size: 1rem; /* Reducir tamaño de títulos */
-  }
-
-  .info-section h3 {
-    font-size: 0.9rem; /* Reducir tamaño de subtítulos */
-  }
-
-  .arrow {
-    font-size: 1.5rem; /* Reducir tamaño de las flechas */
-  }
-}
-
 /* Contenedor del slider */
 .slider-container {
   position: relative; /* Asegura que las flechas se posicionen dentro del contenedor */
@@ -156,26 +135,25 @@ h1, h2, h3 {
 
 /* Estilo base para las flechas */
 .arrow {
-  margin-top: 10px;
+  margin-top: 5px;
   position: absolute;
   top: 76%; /* Centrar verticalmente */
   transform: translateY(-50%);
   background-color: transparent;
   border: none;
-  color: #ff2f00;
-  font-size: 3rem; /* Reducir tamaño de las flechas */
+  color: rgb(239, 11, 11);
+  font-size: 4rem; /* Reducir tamaño de las flechas */
   cursor: pointer;
-  transition: color 0.3s ease, transform 0.3s ease; /* Transición suave */
   z-index: 10; /* Asegura que las flechas estén por encima del contenido */
   
 }
 
 .arrow-left {
-  left: 5px; /* Ajustar posición izquierda */
+  left: 50px; /* Ajustar posición izquierda */
 }
 
 .arrow-right {
-  right: 39%; /* Ajustar posición derecha como un porcentaje del contenedor */
+  right: 41%; /* Ajustar posición derecha como un porcentaje del contenedor */
 }
 
 .arrow:hover {
@@ -183,58 +161,68 @@ h1, h2, h3 {
 }
 
 
-/* Estilos generales */
-.information-text {
-  color: #ffffff; /* Texto gris oscuro */
-  margin-bottom: 15px;
-  display: block;
-  font-style: italic;
+/* Hasta 1300px */
+@media (max-width: 1300px) {
+  .dynamic-text-container,
+  .info-section,
+  .container-common {
+    padding: 20px; /* Padding extra para evitar que el borde se vea mal */
+  }
 }
 
-/* Media query para hacerlo responsivo */
+/* Hasta 768px */
 @media (max-width: 768px) {
+  .container-common,
+  .dynamic-text-container,
+  .info-section {
+    font-size: 0.9rem; /* Reducir tamaño de texto */
+    padding: 10px; /* Reducir padding */
+    width: 100%; /* Ocupa todo el ancho */
+    margin: 10px auto; /* Ajustar márgenes */
+  }
+
+  .dynamic-text-container {
+    height: auto; /* Altura automática */
+  }
+
+  .info-section h2 {
+    font-size: 1rem; /* Títulos más pequeños */
+  }
+
+  .info-section h3 {
+    font-size: 0.9rem; /* Subtítulos más pequeños */
+  }
+
+  .info-section a {
+    position: center; /* Centrar el enlace */
+    margin-right: 40%;
+
+  }
   .container {
-    padding: 15px; /* Reducir padding en pantallas pequeñas */
+    padding: 15px; /* Padding específico */
   }
 
   .text {
-    font-size: 0.9rem; /* Reducir tamaño de texto en pantallas pequeñas */
+    font-size: 0.9rem; /* Texto reducido */
   }
 
   .arrow {
-    font-size: 2.5rem; /* Reducir tamaño de las flechas */
+    margin-top: 5%;
+    font-size: 2.5rem; /* Flechas grandes para mejor visibilidad */
   }
 
   .arrow-left {
-    left: 5px; /* Ajustar posición izquierda en pantallas pequeñas */
+    left: 5%; /* Ajuste izquierdo */
   }
 
   .arrow-right {
-    right: 5%; /* Reducir el espacio derecho en pantallas pequeñas */
+    right: 5%; /* Ajuste derecho */
   }
 }
 
+/* Hasta 480px */
 @media (max-width: 480px) {
   .arrow-right {
-    right: 10px; /* Usar un valor fijo en pantallas muy pequeñas */
+    right: 10px; /* Ajuste más preciso en pantallas muy pequeñas */
   }
-}
-
-/* Botón para cambiar idioma en Page */
-.language-toggle {
-  position: absolute;
-  top: 15px;
-  left: 25px;
-  margin-bottom: 25px; /* Nuevo margen inferior */
-  font-size: 16px;
-  padding: 4px 8px;
-  background-color: #ff0000;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  z-index: 1000;
-  width: auto;
-  display: inline-block;
-  max-width: fit-content;
 }

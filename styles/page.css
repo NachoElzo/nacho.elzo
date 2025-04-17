@@ -164,7 +164,7 @@ body {
   }
 
     .dynamic-text-container {
-      height: auto; /* Altura automática */
+      min-height: 120px;
     }
 
     .info-section h2 {

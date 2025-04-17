@@ -162,15 +162,9 @@ body {
     width: 100%; /* Ocupa todo el ancho */
     margin: 20px auto; /* Ajustar márgenes */
   }
-    body {
-      overflow-x: hidden; /* Evitar el desbordamiento horizontal */
-    }
 
-    .page {
-      overflow-x: hidden; /* Evitar el desbordamiento horizontal */
-    }
     .dynamic-text-container {
-      min-height: 125px;
+      min-height: 120px;
     }
  
     .info-section h2 {

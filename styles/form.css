@@ -14,7 +14,8 @@
   border: 4px solid #a5a29c;
   border-radius: 8px;
   z-index: 9999;
-  overflow-y: auto;
+  overflow-y: auto; /* Asegura que el contenido dentro del contenedor sea scrollable sin desbordar */
+  overflow-x: hidden; /* Evita que el contenido se desborde horizontalmente */
 }
 
 @media (max-width: 768px) {
@@ -22,11 +23,12 @@
     position: relative;
     width: 100%;
     margin-left: 10px;
-    margin-top: 20px; 
-    max-height: none;
+    margin-top: 20px;
+    max-height: 100vh; /* Evita que se expanda demasiado en pantallas pequeñas */
     padding: 5px;
   }
 }
+
 /* form container */
 .form-card {
   position: relative;
@@ -35,14 +37,15 @@
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+
 /* Título e información */
 .form-title {
   text-align: center;
   font-size: 24px;
   margin-bottom: 20px;
-  margin-top: 0px
-  
+  margin-top: 0px;
 }
+
 /* Texto informativo */
 .information-text {
   color: #d8d7d7;
@@ -66,8 +69,7 @@
 .form-group label {
   margin-bottom: 5px;
   font-weight: bold;
-  font-size: 14px
-  
+  font-size: 14px;
 }
 
 .form-group input,
@@ -78,6 +80,7 @@
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  transition: all 0.3s ease; /* Asegura que los cambios sean suaves */
 }
 
 .form-group textarea {
@@ -87,8 +90,8 @@
 
 .form-group input:focus,
 .form-group textarea:focus {
-  outline: none; /* Quita el azul por defecto */
-  border: 2px solid #91c891; /* Aplica tu rojo */
+  outline: none; /* Quita el borde azul predeterminado */
+  border: 2px solid #91c891; /* Nuevo borde al hacer foco */
 }
 
 /* Botón de enviar */
@@ -117,6 +120,7 @@
   font-size: 13px;
   margin-top: 5px;
 }
+
 /* efecto de backgroudn al enviar */
 .popup-message {
   position: fixed;
@@ -148,4 +152,17 @@
   cursor: pointer;
 }
 
+/* Evitar que los elementos cambien de tamaño al enfocar */
+.form-group input,
+.form-group textarea {
+  max-height: 40px; /* Limita la altura máxima para evitar que se agranden */
+}
 
+@media (max-width: 768px) {
+  .form-group input,
+  .form-group textarea {
+    font-size: 12px; /* Asegura un tamaño de fuente consistente */
+    padding: 10px; /* Asegura que el padding no cambie */
+    max-height: 40px; /* Limita la altura máxima para evitar que crezca */
+  }
+}

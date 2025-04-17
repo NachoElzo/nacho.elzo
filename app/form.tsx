@@ -10,7 +10,7 @@ const translations = {
   es: {
     formTitle: "Formulario de Contacto",
     informationText:
-      "Complete todos los campos del formulario para poder ofrecerle una atención más personalizada y adecuada a tus necesidades",
+      "Completa todos los campos y te responderé a la brevedad.",
     nombreLabel: "Nombre *",
     apellidoLabel: "Apellido *",
     apellidoPlaceholder: "Ej: Pérez",
@@ -27,7 +27,7 @@ const translations = {
   en: {
     formTitle: "Contact Form",
     informationText:
-      "Complete all the fields of the form so we can provide you with more personalized and adequate attention to your needs",
+      "Fill all fields and I’ll get back to you shortly.",
     nombreLabel: "Name *",
     apellidoLabel: "Last Name *",
     apellidoPlaceholder: "e.g., Pérez",
@@ -157,7 +157,7 @@ const FormPage = () => {
           ...prev,
           email:
             language === 'es'
-              ? 'Por favor ingrese un email válido'
+              ? 'Ingrese un email válido'
               : 'Please enter a valid email',
         }));
       } else {
@@ -209,8 +209,12 @@ const FormPage = () => {
           <div className="popup-message">
             <div className="popup-content">
               <p>{successMessage || errorMessage}</p>
-              <button className="popup-close" onClick={closePopup} style={{ backgroundColor: 'green', color: 'white' }}>
-                Aceptar
+              <button
+                className="popup-close"
+                onClick={closePopup}
+                style={{ backgroundColor: 'green', color: 'white' }}
+              >
+                {language === 'es' ? 'Aceptar' : 'Accept'}
               </button>
             </div>
           </div>

@@ -8,7 +8,7 @@
   right: 10px;
   width: 36%;
   max-height: 96vh;
-  padding: 20px;
+  padding: 10px;
   box-sizing: border-box;
   background: linear-gradient(135deg, #313131, #3a3a3a);
   border: 4px solid #a5a29c;
@@ -22,7 +22,7 @@
     position: relative;
     width: 100%;
     margin-left: 10px;
-    margin-top: 20px; /* <-- Aquí está el cambio */
+    margin-top: 20px; 
     max-height: none;
     padding: 5px;
   }
@@ -39,12 +39,14 @@
 .form-title {
   text-align: center;
   font-size: 24px;
-  margin-bottom: 35px
+  margin-bottom: 20px;
+  margin-top: 0px
+  
 }
 /* Texto informativo */
 .information-text {
   color: #d8d7d7;
-  margin-bottom: 35px;
+  margin-bottom: 15px;
   display: block;
   font-style: italic;
 }
@@ -58,20 +60,21 @@
 .form-group {
   display: flex;
   flex-direction: column;
-  margin-bottom: 15px;
+  margin-bottom: 8px;
 }
 
 .form-group label {
   margin-bottom: 5px;
   font-weight: bold;
-  font-size: 15px
+  font-size: 14px
   
 }
 
 .form-group input,
 .form-group textarea {
+  font-family: 'ArcadeClassic', monospace !important;
   padding: 10px;
-  font-size: 14px;
+  font-size: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
@@ -82,6 +85,12 @@
   min-height: 100px;
 }
 
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none; /* Quita el azul por defecto */
+  border: 2px solid #91c891; /* Aplica tu rojo */
+}
+
 /* Botón de enviar */
 .submit-button {
   padding: 12px;
@@ -90,7 +99,7 @@
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  margin-top: 30px;
+  margin-top: 16px;
   transition: background-color 0.3s ease;
 }
 
@@ -105,10 +114,9 @@
 
 .error-text {
   color: rgb(239, 11, 11);
-  font-size: 15px;
+  font-size: 13px;
   margin-top: 5px;
 }
-
 /* efecto de backgroudn al enviar */
 .popup-message {
   position: fixed;
@@ -139,3 +147,5 @@
   border-radius: 4px;
   cursor: pointer;
 }
+
+

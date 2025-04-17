@@ -129,13 +129,13 @@ h1, h2, h3 {
 
 /* Estilo de las flechas dentro del slider */
 .slider-container .arrow {
-  margin-top: 25px;
+  margin-top: 15px;
   position: absolute;
   transform: translateY(-90%);
   background-color: transparent;
   border: none;
   color: rgb(239, 11, 11);
-  font-size: 3rem;
+  font-size: 2rem;
   cursor: pointer;
 }
 
@@ -148,7 +148,7 @@ h1, h2, h3 {
 }
 /* Efecto de brillo al hacer hover, sin mover la flecha */
 .slider-container .arrow:hover {
-  transform: translateY(-90%) scale(1.1); /* Agranda un poco la flecha */
+  transform: translateY(-90%) scale(1.3); /* Agranda un poco la flecha */
 }
 /* Hasta 1300px */
 @media (max-width: 1300px) {
@@ -170,40 +170,40 @@ h1, h2, h3 {
     margin: 20px auto; /* Ajustar márgenes */
   }
 
-  .dynamic-text-container {
-    height: auto; /* Altura automática */
-  }
+    .dynamic-text-container {
+      height: auto; /* Altura automática */
+    }
 
-  .info-section h2 {
-    font-size: 1rem; /* Títulos más pequeños */
-  }
+    .info-section h2 {
+      font-size: 1rem; /* Títulos más pequeños */
+    }
 
-  .info-section h3 {
-    font-size: 0.9rem; /* Subtítulos más pequeños */
-  }
+    .info-section h3 {
+      font-size: 0.9rem; /* Subtítulos más pequeños */
+    }
 
-  .info-section a {
-    position: center; /* Centrar el enlace */
-    margin-left: 33%;
+    .info-section a {
+      position: center; /* Centrar el enlace */
+      margin-left: 33%;
 
-  }
+    }
 
-  .text {
-    font-size: 0.9rem; /* Texto reducido */
-  }
-  
-  .arrow {
-    position: relative;
-    font-size: 0.5rem;
-  }
+    .text {
+      font-size: 0.9rem; /* Texto reducido */
+    }
+    
+    .arrow {
+      position: absolute;
+      font-size: 0.5rem;
+    }
 
-  .arrow-left {
-    left: 40px; /* Ajustar posición izquierda */
-  }
+    .arrow-left {
+      left: 40px; /* Ajustar posición izquierda */
+    }
 
-  .arrow-right {
-    right: 40px /* Ajustar posición derecha como un porcentaje del contenedor */
-  }
+    .arrow-right {
+      right: 40px; /* Ajustar posición derecha como un porcentaje del contenedor */
+    }
 
 }
     

@@ -164,6 +164,9 @@
     padding: 10px;
     max-height: 40px;
   }
+  .popup-content {
+    width: 70%;
+  }
 }
 
 

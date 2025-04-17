@@ -17,18 +17,15 @@ const Page = () => {
         "INGENIERO EN INFORMÁTICA",
         "ESPECIALIZADO EN QUALITY ASSURANCE Y AUTOMATIZACIÓN",
         "ME APASIONA CREAR SOLUCIONES EFICIENTES PARA PROYECTOS INFORMÁTICOS.",
-        "COMPLETA EL FORMULARIO",
-        "TE CONTACTARÉ A LA BREVEDAD."
       ],
       switchButton: "Switch to English",
       slides: [
         {
-          title: "¿ESTÁS BUSCANDO SOLUCIONES EFICIENTES PARA TU PROYECTO INFORMÁTICO?",
-          subtitle: "¡Estás en el lugar adecuado!",
+          title: "MI PERFIL",
           content: [
-            "Soy un profesional especializado en automatización comprometido con ofrecer soluciones seguras y eficientes.",
-            "Trabajo contigo para optimizar procesos y proteger aplicaciones, ahorrando tiempo y recursos.",
-            "Te propongo estrategias personalizadas alineadas con tus objetivos."
+            "Soy un profesional especializado en automatización, enfocado en ofrecer soluciones seguras, eficientes y sostenibles.",
+            "Colaboro contigo para optimizar procesos y encontrar la mejor solución para tus aplicaciones, ahorrando tiempo y recursos.",
+            "Propongo estrategias personalizadas alineadas con tus objetivos y necesidades."
           ],
           link: "/CV-Jose-Ignacio-Elzo.pdf"
         },
@@ -36,22 +33,21 @@ const Page = () => {
           title: "EXPERIENCIA Y COMPROMISO",
           subtitle: "",
           content: [
-            "Experiencia en automatización de procesos y soluciones en ciberseguridad.",
-            "Cumplo con altos estándares de calidad y buenas prácticas en el sector IT.",
-            "Trabajo de manera transparente, asegurando el cumplimiento de requisitos técnicos."
+            "Amplia experiencia en la automatización de interfaces frontend y servicios API",
+            "Comprometido con altos estándares de calidad y las mejores prácticas del sector tecnológico.",
+            "Experiencia en entornos ágiles y DevOps, contribuyendo activamente a la productividad del equipo.",
           ],
-          link: ""
         },
       ],
       apps: [
         { 
-          title: "Mis proyectos personales",
-          subtitle: "Check for Vulnerabilities",
+          title: "MIS PROYECTOS",
+          subtitle: "",
           description: "Aplicación para detectar vulnerabilidades en un sitio web.",
           link: "https://testealo.vercel.app/check-vulnerabilities"
         },
         {
-          title: "Check for Accessibility",
+          title: "",
           subtitle: "",
           description: "Aplicación para verificar falta de accesibilidad en un sitio web.",
           link: "https://testealo.vercel.app/check-accessibility"
@@ -64,18 +60,15 @@ const Page = () => {
         "INFORMATION TECHNOLOGY ENGINEER",
         "SPECIALIZED IN QUALITY ASSURANCE AND AUTOMATION",
         "I'M PASSIONATE ABOUT CREATING EFFICIENT SOLUTIONS FOR IT PROJECTS.",
-        "FILL OUT THE FORM",
-        "I WILL CONTACT YOU SOON."
       ],
       switchButton: "Cambiar a Español",
       slides: [
         {
-          title: "ARE YOU LOOKING FOR EFFICIENT SOLUTIONS FOR YOUR IT PROJECT?",
-          subtitle: "You're in the right place!",
+          title: "MY APPROACH",
           content: [
-            "I am a professional specialized in automation with secure and efficient solutions.",
-            "I work with you to optimize processes and protect applications, saving time and resources.",
-            "I offer personalized strategies aligned with your objectives."
+            "I’m an automation specialist focused on delivering secure, efficient, and sustainable solutions.",
+            "I work with you to optimize processes and find the best solution for your applications, saving time and resources.",
+            "I offer tailored strategies aligned with your goals and needs."
           ],
           link: "/CV-Jose-Ignacio-Elzo.pdf"
         },
@@ -83,24 +76,23 @@ const Page = () => {
           title: "EXPERIENCE & COMMITMENT",
           subtitle: "",
           content: [
-            "Experience in automating processes and developing cybersecurity solutions.",
-            "I meet the highest quality standards and industry best practices in IT.",
-            "I work transparently, ensuring projects meet both technical and security requirements."
+            "Extensive experience in automating frontend interfaces and API services.",
+            "Committed to high quality standards and industry best practices in the tech sector.",
+            "Experienced in agile and DevOps environments, actively contributing to team productivity."
           ],
-          link: ""
         },
       ],
       apps: [
         { 
-          title: "My Personal Projects",
-          subtitle: "Check for Vulnerabilities",
+          title: "MY PROJECTS",
+          subtitle: "",
           description: "Application to detect vulnerabilities on a website.",
           link: "https://testealo.vercel.app/check-vulnerabilities"
         },
         {
-          title: "Check for Accessibility",
+          title: "",
           subtitle: "",
-          description: "Application to verify accessibility issues on a website.",
+          description: "Application to check for a lack of accessibility on websites.",
           link: "https://testealo.vercel.app/check-accessibility"
         },
       ]
@@ -192,7 +184,7 @@ const Page = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              {language === 'es' ? "Visita mi app" : "Visit my app"}
+              {language === 'es' ? "Link Testealo" : "Link Testealo"}
             </a>
           </section>
 

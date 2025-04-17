@@ -11,11 +11,6 @@ body {
   overflow-x: hidden; /* Evitar desbordamiento horizontal */
 }
 
-h1, h2, h3 {
-  font-family: 'ArcadeClassic', monospace !important;
-  color: #d8d7d7;
-}
-
 .page {
   width: 100%; /* Ajustar al 100% del ancho en todas las vistas */
   padding: 50px 20px 20px 20px; /* Agrega padding-top para dejar espacio para el botón fijo */
@@ -99,26 +94,24 @@ h1, h2, h3 {
 }
 
 .info-section h3 {
-  font-size: 1rem; /* Reducir tamaño de subtítulos */
+  font-size: 0.8rem; /* Reducir tamaño de subtítulos */
   color: #d8d7d7;/* Color gris */
-  margin-bottom: 10px;
 }
 .info-section h2 {
-  margin-top: 10px;
-  font-size: 1.2rem; /* Reducir tamaño de títulos */
+  margin-top: -5px;
+  margin-bottom: -5px;
+  font-size: 1rem; /* Reducir tamaño de títulos */
 }
 
-
-/* MEJORAR 1 */
 .info-section a {
   display: inline-block; /* Cambiar a inline-block para que solo ocupe el tamaño del texto */
   font-family: 'ArcadeClassic', monospace; /* Mantener la misma fuente */
   font-size: 1.2rem; /* Reducir tamaño de texto */
   color: rgb(8, 0, 168); /* Azul más claro */
-  text-align: center; /* Centrar el texto */
+  text-align:justify; /* Centrar el texto */
   text-decoration: none; /* Eliminar subrayado */
-  margin-top: 10px; /* Espaciado superior */
-  margin-left: 42%;
+  margin-top: -10px; /* Espaciado superior */
+  margin-left: 40%;
 }
 /* Contenedor del slider y flechas */
 .slider-container {
@@ -183,8 +176,8 @@ h1, h2, h3 {
     }
 
     .info-section a {
-      position: center; /* Centrar el enlace */
-      margin-left: 33%;
+      font-size: 15px;
+      margin-left: 10%;
 
     }
 

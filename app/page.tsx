@@ -192,7 +192,7 @@ const Page = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              {language === 'es' ? "Visitar" : "Visit"}
+              {language === 'es' ? "Visita mi app" : "Visit my app"}
             </a>
           </section>
 

@@ -61,13 +61,12 @@ h1, h2, h3 {
   font-size: 1.2rem; /* Reducir tamaño de texto */
   font-weight: 800;
   text-align: center;
-  padding: 20px;
+  padding: 10px;
   border: 4px solid #a5a29c; /* Borde cálido */
   height: auto; /* Ajustar altura automáticamente */
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
   text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.2), -1px -1px 5px rgba(255, 255, 255, 0.2); /* Efecto de sombra 3D */
   background: linear-gradient(135deg, #565555, #3a3a3a);
 }
@@ -92,10 +91,9 @@ h1, h2, h3 {
   padding: 20px; /* Reducir padding */
   border: 4px solid #a5a29c; /* Borde cálido */
   text-align: left; /* Alinea solo el texto a la izquierda */
-  margin-top: 20px;
+  margin-top: 30px;
   margin-bottom: 20px;
   border-radius: 10px; /* Bordes redondeados */
-  position: relative; /* Asegurarse de que las flechas estén dentro del contenedor */
   display: block; /* Cambiar de flex a block para que no afecte la alineación del texto */
   background: linear-gradient(135deg, #565555, #3a3a3a);
 }
@@ -115,37 +113,30 @@ h1, h2, h3 {
 .info-section a {
   display: inline-block; /* Cambiar a inline-block para que solo ocupe el tamaño del texto */
   font-family: 'ArcadeClassic', monospace; /* Mantener la misma fuente */
-  font-size: 1rem; /* Reducir tamaño de texto */
-  font-weight: bold; /* Texto grueso */
-  color: rgb(0, 4, 255); /* Azul más claro */
+  font-size: 1.2rem; /* Reducir tamaño de texto */
+  color: rgb(8, 0, 168); /* Azul más claro */
   text-align: center; /* Centrar el texto */
   text-decoration: none; /* Eliminar subrayado */
-  margin-top: 30px; /* Espaciado superior */
-  margin-left: 43%;
+  margin-top: 10px; /* Espaciado superior */
+  margin-left: 42%;
 }
-/* Contenedor del slider */
+/* Contenedor del slider y flechas */
 .slider-container {
-  position: relative; /* Asegura que las flechas se posicionen dentro del contenedor */
-  z-index: 1; /* Asegura que el slider esté por debajo de las flechas */
-  overflow: hidden; /* Evitar desbordamiento */
-  width: 100%; /* Asegura que ocupe todo el ancho disponible */
-  max-width: 100%; /* Limitar el ancho máximo */
-  margin: 0 auto; /* Centrar el contenedor */
+  z-index: 1;
+  overflow: hidden;
+  margin: 0 auto 7px auto;
 }
 
-/* Estilo base para las flechas */
-.arrow {
-  margin-top: 5px;
+/* Estilo de las flechas dentro del slider */
+.slider-container .arrow {
+  margin-top: 25px;
   position: absolute;
-  top: 76%; /* Centrar verticalmente */
-  transform: translateY(-50%);
+  transform: translateY(-90%);
   background-color: transparent;
   border: none;
   color: rgb(239, 11, 11);
-  font-size: 4rem; /* Reducir tamaño de las flechas */
+  font-size: 3rem;
   cursor: pointer;
-  z-index: 10; /* Asegura que las flechas estén por encima del contenido */
-  
 }
 
 .arrow-left {
@@ -155,12 +146,10 @@ h1, h2, h3 {
 .arrow-right {
   right: 41%; /* Ajustar posición derecha como un porcentaje del contenedor */
 }
-
-.arrow:hover {
-  transform: translateY(-50%) scale(1.2); /* Efecto de agrandado */
+/* Efecto de brillo al hacer hover, sin mover la flecha */
+.slider-container .arrow:hover {
+  transform: translateY(-90%) scale(1.1); /* Agranda un poco la flecha */
 }
-
-
 /* Hasta 1300px */
 @media (max-width: 1300px) {
   .dynamic-text-container,
@@ -178,7 +167,7 @@ h1, h2, h3 {
     font-size: 0.9rem; /* Reducir tamaño de texto */
     padding: 10px; /* Reducir padding */
     width: 100%; /* Ocupa todo el ancho */
-    margin: 10px auto; /* Ajustar márgenes */
+    margin: 20px auto; /* Ajustar márgenes */
   }
 
   .dynamic-text-container {
@@ -195,34 +184,26 @@ h1, h2, h3 {
 
   .info-section a {
     position: center; /* Centrar el enlace */
-    margin-right: 40%;
+    margin-left: 33%;
 
-  }
-  .container {
-    padding: 15px; /* Padding específico */
   }
 
   .text {
     font-size: 0.9rem; /* Texto reducido */
   }
-
+  
   .arrow {
-    margin-top: 5%;
-    font-size: 2.5rem; /* Flechas grandes para mejor visibilidad */
+    position: relative;
+    font-size: 0.5rem;
   }
 
   .arrow-left {
-    left: 5%; /* Ajuste izquierdo */
+    left: 40px; /* Ajustar posición izquierda */
   }
 
   .arrow-right {
-    right: 5%; /* Ajuste derecho */
+    right: 40px /* Ajustar posición derecha como un porcentaje del contenedor */
   }
-}
 
-/* Hasta 480px */
-@media (max-width: 480px) {
-  .arrow-right {
-    right: 10px; /* Ajuste más preciso en pantallas muy pequeñas */
-  }
 }
+    

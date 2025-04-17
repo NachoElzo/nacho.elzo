@@ -20,7 +20,7 @@ const translations = {
     telefonoPlaceholder: "Ej: 987654321",
     comentarioLabel: "Comentario *",
     comentarioPlaceholder:
-      "Tu comentario debe contener un máximo de 300 caracteres",
+      "Tu comentario debe contener un máximo de 150 caracteres",
     submit: "Enviar",
     sending: "Enviando..."
   },
@@ -37,7 +37,7 @@ const translations = {
     telefonoPlaceholder: "e.g., 987654321",
     comentarioLabel: "Comment *",
     comentarioPlaceholder:
-      "Your comment should be at most 300 characters",
+      "Your comment should be at most 150 characters",
     submit: "Submit",
     sending: "Sending..."
   }

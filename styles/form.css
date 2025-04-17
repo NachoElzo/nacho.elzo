@@ -48,6 +48,7 @@
 
 /* Texto informativo */
 .information-text {
+  font-size: 13px;
   color: #d8d7d7;
   margin-bottom: 15px;
   display: block;
@@ -69,14 +70,14 @@
 .form-group label {
   margin-bottom: 5px;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .form-group input,
 .form-group textarea {
   font-family: 'ArcadeClassic', monospace !important;
   padding: 10px;
-  font-size: 12px;
+  font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
@@ -160,12 +161,16 @@
 @media (max-width: 768px) {
   .form-group input,
   .form-group textarea {
-    font-size: 16px; /* iOS font-size fix to prevent zoom */
     padding: 10px;
     max-height: 40px;
   }
   .popup-content {
-    width: 70%;
+    width: 60%;
+    height: 10%;
+    border-radius: 20px;
+  }
+  .popup-message {
+    font-size: 14px;
   }
 }
 

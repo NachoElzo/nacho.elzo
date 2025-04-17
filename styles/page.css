@@ -157,34 +157,30 @@ body {
   .container-common,
   .dynamic-text-container,
   .info-section {
-    font-size: 0.9rem; /* Reducir tamaño de texto */
+    font-size: 0.8rem; /* Reducir tamaño de texto */
     padding: 10px; /* Reducir padding */
     width: 100%; /* Ocupa todo el ancho */
     margin: 20px auto; /* Ajustar márgenes */
   }
 
     .dynamic-text-container {
-      min-height: 120px;
+      min-height: 125px;
     }
-
+ 
     .info-section h2 {
       font-size: 1rem; /* Títulos más pequeños */
     }
 
     .info-section h3 {
-      font-size: 0.9rem; /* Subtítulos más pequeños */
+      font-size: 0.7rem; /* Subtítulos más pequeños */
     }
-
+    
     .info-section a {
       font-size: 15px;
       margin-left: 10%;
 
     }
-
-    .text {
-      font-size: 0.9rem; /* Texto reducido */
-    }
-    
+  
     .arrow {
       position: absolute;
       font-size: 0.5rem;

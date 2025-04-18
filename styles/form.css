@@ -160,7 +160,7 @@
 
 @media (max-width: 768px) {
   .form-container{
-    height: 100%;
+    height: auto;
   }
   .form-group input,
   .form-group textarea {
@@ -175,5 +175,3 @@
     font-size: 14px;
   }
 }
-
-

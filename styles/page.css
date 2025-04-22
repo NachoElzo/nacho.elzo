@@ -87,7 +87,7 @@ body {
   border: 4px solid #a5a29c; /* Borde cálido */
   text-align: left; /* Alinea solo el texto a la izquierda */
   margin-top: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   border-radius: 10px; /* Bordes redondeados */
   display: block; /* Cambiar de flex a block para que no afecte la alineación del texto */
   background: linear-gradient(135deg, #565555, #3a3a3a);
@@ -143,12 +143,47 @@ body {
 .slider-container .arrow:hover {
   transform: translateY(-90%) scale(1.3); /* Agranda un poco la flecha */
 }
-/* Hasta 1300px */
-@media (max-width: 1300px) {
-  .dynamic-text-container,
-  .info-section,
-  .container-common {
-    padding: 20px; /* Padding extra para evitar que el borde se vea mal */
+
+/* Configuración por defecto para pantallas grandes */
+.social-icons {
+  display: flex; /* Agregado para que funcione gap */
+  position: static;
+  margin: 30px 0 25px 23% !important; /* forzamos el margen izquierdo al 20% */
+  justify-content: flex-start;
+  gap: 100px !important;
+  width: auto;
+  height: auto;
+}
+.social-icons a img {
+  width: 160px;
+  height: 60px;
+  border-radius: 5px;
+}
+/* Aplica altura de 99% a la imagen del id "linkedin" */
+#linkedin img {
+  height: 79% !important;
+  margin-top: 3px
+}
+
+
+/* Hasta 768px */
+@media (max-width: 1500px) {
+  .dynamic-text-container {
+    min-height: 120px;
+    font-size: 0.9rem; /* Reducir tamaño de texto */
+  }
+  .social-icons {
+    position: static;
+    margin: 20px 0 30px 20% !important; /* top, right, bottom, left */
+    justify-content: flex-start; /* Alinea los iconos a la izquierda */
+    gap: 20px;
+    width: auto;
+    height: auto;
+  }
+  .social-icons a img {
+    width: 150px;
+    height: 60px;
+    margin-right: 0px;
   }
 }
 
@@ -194,5 +229,22 @@ body {
       right: 40px; /* Ajustar posición derecha como un porcentaje del contenedor */
     }
 
+    .social-icons {
+      /* Dispone los iconos de forma estática al final del contenido */
+      position: static;
+      margin: 50px auto !important; /* Centrado y con espacio superior */
+      justify-content: center;
+      gap: 35px !important; /* Mantener espacio extra entre iconos */
+      width: auto;
+      height: auto;
+    }
+    .social-icons a img {
+      width: 110px;
+      height: 45px;
+    }
+
+    .social-icons a[href*="github"] img {
+      height: 45px !important;
+    }
 }
-    
+

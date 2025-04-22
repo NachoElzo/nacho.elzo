@@ -9,7 +9,6 @@ import '../styles/form.css';
 const Page = () => {
   const { language, toggleLanguage } = useContext(LanguageContext);
 
-  // Agregamos la propiedad switchButton para el botón en page.tsx
   const translations = {
     es: {
       phrases: [
@@ -112,12 +111,10 @@ const Page = () => {
 
   return (
     <div className="page" style={{ position: 'relative' }}>
-      {/* Botón para cambiar idioma implementado en Page */}
       <button className="language-toggle" onClick={toggleLanguage}>
         {translations[language].switchButton}
       </button>
 
-      {/* Sección de texto dinámico */}
       <div className="dynamic-text-container">
         <p>{translations[language].phrases[currentPhraseIndex]}</p>
       </div>
@@ -146,8 +143,6 @@ const Page = () => {
               </a>
             )}
           </section>
-
-          {/* Flechas de navegación para slides */}
           <button
             className="arrow arrow-left"
             onClick={() =>
@@ -187,8 +182,6 @@ const Page = () => {
               {language === 'es' ? "Link Testealo" : "Link Testealo"}
             </a>
           </section>
-
-          {/* Flechas de navegación para apps */}
           <button
             className="arrow arrow-left"
             onClick={() =>
@@ -213,6 +206,16 @@ const Page = () => {
       </div>
 
       <Form />
+      <div className="social-icons">
+        <a id = "linkedin" href="https://www.linkedin.com/in/joseignacioelzo/" target="_blank" rel="noopener noreferrer">
+          <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" 
+            alt="LinkedIn" />
+        </a>
+        <a id = "github" href="https://github.com/NachoElzo" target="_blank" rel="noopener noreferrer">
+          <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" 
+            alt="GitHub" />
+        </a>
+      </div>
     </div>
   );
 };

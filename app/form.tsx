@@ -12,6 +12,7 @@ const translations = {
     informationText:
       "Completa todos los campos y te responderé a la brevedad.",
     nombreLabel: "Nombre *",
+    nombrePlaceholder: "Ej: Juan",
     apellidoLabel: "Apellido *",
     apellidoPlaceholder: "Ej: Pérez",
     emailLabel: "Email *",
@@ -29,12 +30,13 @@ const translations = {
     informationText:
       "Fill all fields and I’ll get back to you shortly.",
     nombreLabel: "Name *",
+    nombrePlaceholder: "E.g: Juan",
     apellidoLabel: "Last Name *",
-    apellidoPlaceholder: "e.g., Pérez",
+    apellidoPlaceholder: "E.g: Pérez",
     emailLabel: "Email *",
-    emailPlaceholder: "e.g., user@domain.com",
+    emailPlaceholder: "E.g: user@domain.com",
     telefonoLabel: "Phone *",
-    telefonoPlaceholder: "e.g., 987654321",
+    telefonoPlaceholder: "E.g: 987654321",
     comentarioLabel: "Comment *",
     comentarioPlaceholder:
       "Your comment should be at most 150 characters",
@@ -228,7 +230,7 @@ const FormPage = () => {
               name="nombre"
               maxLength={15}
               required
-              placeholder="Ej: Juan"
+              placeholder={translations[language].nombrePlaceholder}
               value={formData.nombre}
               onChange={handleFieldChange}
             />

@@ -20,7 +20,7 @@ body {
 /* Botón para cambiar idioma en Page */
 .language-toggle {
   position: absolute;
-  top: 15px;
+  top: 10px;
   left: 25px;
   margin-bottom: 25px; /* Nuevo margen inferior */
   font-size: 16px;
@@ -161,20 +161,25 @@ body {
 }
 /* Aplica altura de 99% a la imagen del id "linkedin" */
 #linkedin img {
-  height: 79% !important;
+  height: 78.5% !important;
   margin-top: 3px
 }
 
 
 /* Hasta 768px */
 @media (max-width: 1500px) {
+  .container-common,
+  .dynamic-text-container,
+  .info-section {
+    padding: 17px; /* Reducir padding */
+  }
   .dynamic-text-container {
     min-height: 120px;
     font-size: 0.9rem; /* Reducir tamaño de texto */
   }
   .social-icons {
     position: static;
-    margin: 20px 0 30px 20% !important; /* top, right, bottom, left */
+    margin: 10px 0 30px 18% !important; /* top, right, bottom, left */
     justify-content: flex-start; /* Alinea los iconos a la izquierda */
     gap: 20px;
     width: auto;
@@ -182,8 +187,12 @@ body {
   }
   .social-icons a img {
     width: 150px;
-    height: 60px;
+    height: 55px;
     margin-right: 0px;
+  }
+  #linkedin img {
+    height: 78.5% !important;
+    margin-top: 3px
   }
 }
 
@@ -245,6 +254,10 @@ body {
 
     .social-icons a[href*="github"] img {
       height: 45px !important;
+    }
+    #linkedin img {
+      height: 78.5% !important;
+      margin-top: 2px
     }
 }
 

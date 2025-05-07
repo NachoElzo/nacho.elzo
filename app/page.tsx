@@ -39,19 +39,26 @@ const Page = () => {
         },
       ],
       apps: [
-        { 
+        {
           title: "MIS PROYECTOS",
-          subtitle: "",
-          description: "Aplicación para detectar vulnerabilidades en un sitio web.",
-          link: "https://testealo.vercel.app/check-vulnerabilities"
+          description: "Usa las flechas para explorar mis aplicaciones.",
         },
         {
-          title: "",
-          subtitle: "",
-          description: "Aplicación para verificar falta de accesibilidad en un sitio web.",
-          link: "https://testealo.vercel.app/check-accessibility"
+          title: "Testealo - Verificador de Vulnerabilidades",
+          description: "Aplicación para detectar vulnerabilidades en un sitio web.",
+          link: "https://testealo.vercel.app/check-vulnerabilities",
         },
-      ]
+        {
+          title: "Testealo - Verificador de Accesibilidad",
+          description: "Aplicación para verificar falta de accesibilidad en un sitio web.",
+          link: "https://testealo.vercel.app/check-accessibility",
+        },
+        {
+          title: "Documentalo",
+          description: "Un espacio para documentar lo que voy aprendiendo.",
+          link: "https://documentalo.vercel.app/",
+        },
+      ],
     },
     en: {
       phrases: [
@@ -82,20 +89,27 @@ const Page = () => {
         },
       ],
       apps: [
-        { 
+        {
           title: "MY PROJECTS",
-          subtitle: "",
-          description: "Application to detect vulnerabilities on a website.",
-          link: "https://testealo.vercel.app/check-vulnerabilities"
+          description: "Use the arrows to explore my applications.",
         },
         {
-          title: "",
-          subtitle: "",
-          description: "Application to check for a lack of accessibility on websites.",
-          link: "https://testealo.vercel.app/check-accessibility"
+          title: "Testealo - Vulnerability Checker",
+          description: "Application to detect vulnerabilities on a website.",
+          link: "https://testealo.vercel.app/check-vulnerabilities",
         },
-      ]
-    }
+        {
+          title: "Testealo - Accessibility Checker",
+          description: "Application to check for a lack of accessibility on websites.",
+          link: "https://testealo.vercel.app/check-accessibility",
+        },
+        {
+          title: "Documentalo",
+          description: "A space to document what I am learning.",
+          link: "https://testealo.vercel.app/check-accessibility",
+        },
+      ],
+    },
   };
 
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState<number>(0);
@@ -169,18 +183,17 @@ const Page = () => {
         <div className="slider">
           <section className="info-section">
             <h2>{translations[language].apps[currentAppIndex].title}</h2>
-            {translations[language].apps[currentAppIndex].subtitle && (
-              <h3>{translations[language].apps[currentAppIndex].subtitle}</h3>
-            )}
             <p>{translations[language].apps[currentAppIndex].description}</p>
-            <a
-              href={translations[language].apps[currentAppIndex].link}
-              className="navigation-link" 
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {language === 'es' ? "Link Testealo" : "Link Testealo"}
-            </a>
+            {translations[language].apps[currentAppIndex].link && (
+              <a
+                href={translations[language].apps[currentAppIndex].link}
+                className="navigation-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {language === 'es' ? "Abrir aplicación" : "Open application"}
+              </a>
+            )}
           </section>
           <button
             className="arrow arrow-left"
@@ -207,13 +220,11 @@ const Page = () => {
 
       <Form />
       <div className="social-icons">
-        <a id = "linkedin" href="https://www.linkedin.com/in/joseignacioelzo/" target="_blank" rel="noopener noreferrer">
-          <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" 
-            alt="LinkedIn" />
+        <a id="linkedin" href="https://www.linkedin.com/in/joseignacioelzo/" target="_blank" rel="noopener noreferrer">
+          <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
         </a>
-        <a id = "github" href="https://github.com/NachoElzo" target="_blank" rel="noopener noreferrer">
-          <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" 
-            alt="GitHub" />
+        <a id="github" href="https://github.com/NachoElzo" target="_blank" rel="noopener noreferrer">
+          <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
         </a>
       </div>
     </div>

@@ -54,6 +54,11 @@ const Page = () => {
           link: "https://testealo.vercel.app/check-accessibility",
         },
         {
+          title: "Automatizando",
+          description: "Aplicación para practicar automatización.",
+          link: "https://automatizando.vercel.app/",
+        },
+        {
           title: "Documentalo",
           description: "Un espacio para documentar lo que voy aprendiendo.",
           link: "https://documentalo.vercel.app/",
@@ -104,9 +109,14 @@ const Page = () => {
           link: "https://testealo.vercel.app/check-accessibility",
         },
         {
+          title: "Automatizando",
+          description: "Application for practicing automation.",
+          link: "https://automatizando.vercel.app/",
+        },
+        {
           title: "Documentalo",
           description: "A space to document what I am learning.",
-          link: "https://testealo.vercel.app/check-accessibility",
+          link: "https://documentalo.vercel.app/",
         },
       ],
     },

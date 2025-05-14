@@ -108,6 +108,7 @@ body {
   margin-left: 30px;
 }
 
+
 .info-section a {
   display: inline-block; /* Cambiar a inline-block para que solo ocupe el tamaño del texto */
   font-family: 'ArcadeClassic', monospace; /* Mantener la misma fuente */
@@ -177,6 +178,13 @@ body {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra al pasar el cursor */
   border-color: #ffffff; /* Cambia el color del borde a blanco al hacer hover */
 }
+.project-icon {
+  position: relative;
+  width: 300px; /* Tamaño inicial de los íconos en resolución máxima */
+  height: 40px; /* Altura fija */
+  border-radius: 5px;
+}
+
 
 /* Estilos responsivos */
 @media (max-width: 1024px) {

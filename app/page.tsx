@@ -229,26 +229,46 @@ const Page = () => {
         <div className="slider">
           <section className="info-section">
             <div>
-              <h2>{translations[language].apps[currentAppIndex].title}</h2>
-              <p>{translations[language].apps[currentAppIndex].description}</p>
-              {translations[language].apps[currentAppIndex].link && (
+              {/* Mostrar un ícono representativo en el primer slide */}
+              {currentAppIndex === 0 ? (
+                <img
+                  className="project-icon"
+                  src="https://img.shields.io/badge/My%20Projects-Section-blue?style=for-the-badge&logo=folder"
+                  alt="My Projects Section"
+                />
+              ) : (
+                /* Mostrar un badge representativo para cada proyecto con enlace */
                 <a
                   href={translations[language].apps[currentAppIndex].link}
-                  className="navigation-link"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {language === 'es' ? "Abrir aplicación" : "Open application"}
+                  <img
+                    className="project-icon"
+                    src={
+                      currentAppIndex === 1
+                        ? "https://img.shields.io/badge/Vulnerabilities-Scanner-blue?style=for-the-badge&logo=shield"
+                        : currentAppIndex === 2
+                          ? "https://img.shields.io/badge/Accessibility-Checker-green?style=for-the-badge&logo=eye"
+                          : currentAppIndex === 3
+                            ? "https://img.shields.io/badge/Automation-Practice-orange?style=for-the-badge&logo=robot"
+                            : "https://img.shields.io/badge/Documentation-Learning-yellow?style=for-the-badge&logo=document"
+                    }
+                    alt={translations[language].apps[currentAppIndex].title}
+                  />
                 </a>
               )}
+              <p>{translations[language].apps[currentAppIndex].description}</p>
             </div>
             {/* Flechas debajo del contenido */}
             <div className="arrows-container">
               <button
                 className="arrow arrow-left"
                 onClick={() =>
-                  setCurrentAppIndex((prevIndex) =>
-                    (prevIndex - 1 + translations[language].apps.length) % translations[language].apps.length
+                  setCurrentAppIndex(
+                    (prevIndex) =>
+                      (prevIndex - 1 + translations[language].apps.length) %
+                      translations[language].apps.length
                   )
                 }
               >
@@ -257,8 +277,9 @@ const Page = () => {
               <button
                 className="arrow arrow-right"
                 onClick={() =>
-                  setCurrentAppIndex((prevIndex) =>
-                    (prevIndex + 1) % translations[language].apps.length
+                  setCurrentAppIndex(
+                    (prevIndex) =>
+                      (prevIndex + 1) % translations[language].apps.length
                   )
                 }
               >

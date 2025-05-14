@@ -26,7 +26,6 @@ const Page = () => {
             "Colaboro contigo para optimizar procesos y encontrar la mejor solución para tus aplicaciones, ahorrando tiempo y recursos.",
             "Propongo estrategias personalizadas alineadas con tus objetivos y necesidades."
           ],
-          link: "/CV-Jose-Ignacio-Elzo.pdf"
         },
         {
           title: "EXPERIENCIA Y COMPROMISO",
@@ -81,7 +80,6 @@ const Page = () => {
             "I work with you to optimize processes and find the best solution for your applications, saving time and resources.",
             "I offer tailored strategies aligned with your goals and needs."
           ],
-          link: "/CV-Jose-Ignacio-Elzo.pdf"
         },
         {
           title: "EXPERIENCE & COMMITMENT",
@@ -147,18 +145,8 @@ const Page = () => {
       <div className="slider-container">
         <div className="slider">
           <section className="info-section">
-            <button
-              className="arrow arrow-left"
-              onClick={() =>
-                setCurrentSlideIndex((prevIndex) =>
-                  (prevIndex - 1 + translations[language].slides.length) % translations[language].slides.length
-                )
-              }
-            >
-              &lt;
-            </button>
             <div>
-              <h2>{translations[language].slides[currentSlideIndex].title}</h2>
+              <h2 className="section-title">{translations[language].slides[currentSlideIndex].title}</h2>
               {translations[language].slides[currentSlideIndex].subtitle && (
                 <h3>{translations[language].slides[currentSlideIndex].subtitle}</h3>
               )}
@@ -167,25 +155,71 @@ const Page = () => {
                   <li key={index}>{item}</li>
                 ))}
               </ul>
-              {translations[language].slides[currentSlideIndex].link && (
-                <a
-                  href={translations[language].slides[currentSlideIndex].link}
-                  className="download-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {language === 'es' ? "Descarga mi CV" : "Download my CV"}
-                </a>
+
+              {/* Mostrar redes sociales solo en la primera slide */}
+              {currentSlideIndex === 0 && (
+                <>
+                  <h2 className="section-title">{language === 'es' ? "Mis Redes" : "My Networks"}</h2>
+                  <div className="social-icons">
+                    <a
+                      id="linkedin"
+                      href="https://www.linkedin.com/in/joseignacioelzo/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white"
+                        alt="LinkedIn"
+                      />
+                    </a>
+                    <a
+                      id="github"
+                      href="https://github.com/NachoElzo"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"
+                        alt="GitHub"
+                      />
+                    </a>
+                    <a
+                      id="cv"
+                      href="/CV-Jose-Ignacio-Elzo.pdf"
+                      download
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src="https://img.shields.io/badge/Download%20CV-green?style=for-the-badge&logo=adobeacrobatreader&logoColor=white"
+                        alt="Download CV"
+                      />
+                    </a>
+                  </div>
+                </>
               )}
             </div>
-            <button
-              className="arrow arrow-right"
-              onClick={() =>
-                setCurrentSlideIndex((prevIndex) => (prevIndex + 1) % translations[language].slides.length)
-              }
-            >
-              &gt;
-            </button>
+            {/* Flechas debajo del contenido */}
+            <div className="arrows-container">
+              <button
+                className="arrow arrow-left"
+                onClick={() =>
+                  setCurrentSlideIndex((prevIndex) =>
+                    (prevIndex - 1 + translations[language].slides.length) % translations[language].slides.length
+                  )
+                }
+              >
+                &laquo;
+              </button>
+              <button
+                className="arrow arrow-right"
+                onClick={() =>
+                  setCurrentSlideIndex((prevIndex) => (prevIndex + 1) % translations[language].slides.length)
+                }
+              >
+                &raquo;
+              </button>
+            </div>
           </section>
         </div>
       </div>
@@ -194,16 +228,6 @@ const Page = () => {
       <div className="slider-container">
         <div className="slider">
           <section className="info-section">
-            <button
-              className="arrow arrow-left"
-              onClick={() =>
-                setCurrentAppIndex((prevIndex) =>
-                  (prevIndex - 1 + translations[language].apps.length) % translations[language].apps.length
-                )
-              }
-            >
-              &lt;
-            </button>
             <div>
               <h2>{translations[language].apps[currentAppIndex].title}</h2>
               <p>{translations[language].apps[currentAppIndex].description}</p>
@@ -218,29 +242,34 @@ const Page = () => {
                 </a>
               )}
             </div>
-            <button
-              className="arrow arrow-right"
-              onClick={() =>
-                setCurrentAppIndex((prevIndex) =>
-                  (prevIndex + 1) % translations[language].apps.length
-                )
-              }
-            >
-              &gt;
-            </button>
+            {/* Flechas debajo del contenido */}
+            <div className="arrows-container">
+              <button
+                className="arrow arrow-left"
+                onClick={() =>
+                  setCurrentAppIndex((prevIndex) =>
+                    (prevIndex - 1 + translations[language].apps.length) % translations[language].apps.length
+                  )
+                }
+              >
+                &laquo;
+              </button>
+              <button
+                className="arrow arrow-right"
+                onClick={() =>
+                  setCurrentAppIndex((prevIndex) =>
+                    (prevIndex + 1) % translations[language].apps.length
+                  )
+                }
+              >
+                &raquo;
+              </button>
+            </div>
           </section>
         </div>
       </div>
 
       <Form />
-      <div className="social-icons">
-        <a id="linkedin" href="https://www.linkedin.com/in/joseignacioelzo/" target="_blank" rel="noopener noreferrer">
-          <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
-        </a>
-        <a id="github" href="https://github.com/NachoElzo" target="_blank" rel="noopener noreferrer">
-          <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
-        </a>
-      </div>
     </div>
   );
 };

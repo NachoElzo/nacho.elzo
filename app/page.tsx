@@ -147,44 +147,46 @@ const Page = () => {
       <div className="slider-container">
         <div className="slider">
           <section className="info-section">
-            <h2>{translations[language].slides[currentSlideIndex].title}</h2>
-            {translations[language].slides[currentSlideIndex].subtitle && (
-              <h3>{translations[language].slides[currentSlideIndex].subtitle}</h3>
-            )}
-            <ul>
-              {translations[language].slides[currentSlideIndex].content.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-            {translations[language].slides[currentSlideIndex].link && (
-              <a
-                href={translations[language].slides[currentSlideIndex].link}
-                className="download-link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {language === 'es' ? "Descarga mi CV" : "Download my CV"}
-              </a>
-            )}
+            <button
+              className="arrow arrow-left"
+              onClick={() =>
+                setCurrentSlideIndex((prevIndex) =>
+                  (prevIndex - 1 + translations[language].slides.length) % translations[language].slides.length
+                )
+              }
+            >
+              &lt;
+            </button>
+            <div>
+              <h2>{translations[language].slides[currentSlideIndex].title}</h2>
+              {translations[language].slides[currentSlideIndex].subtitle && (
+                <h3>{translations[language].slides[currentSlideIndex].subtitle}</h3>
+              )}
+              <ul>
+                {translations[language].slides[currentSlideIndex].content.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+              {translations[language].slides[currentSlideIndex].link && (
+                <a
+                  href={translations[language].slides[currentSlideIndex].link}
+                  className="download-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {language === 'es' ? "Descarga mi CV" : "Download my CV"}
+                </a>
+              )}
+            </div>
+            <button
+              className="arrow arrow-right"
+              onClick={() =>
+                setCurrentSlideIndex((prevIndex) => (prevIndex + 1) % translations[language].slides.length)
+              }
+            >
+              &gt;
+            </button>
           </section>
-          <button
-            className="arrow arrow-left"
-            onClick={() =>
-              setCurrentSlideIndex((prevIndex) =>
-                (prevIndex - 1 + translations[language].slides.length) % translations[language].slides.length
-              )
-            }
-          >
-            &#8592;
-          </button>
-          <button
-            className="arrow arrow-right"
-            onClick={() =>
-              setCurrentSlideIndex((prevIndex) => (prevIndex + 1) % translations[language].slides.length)
-            }
-          >
-            &#8594;
-          </button>
         </div>
       </div>
 
@@ -192,39 +194,41 @@ const Page = () => {
       <div className="slider-container">
         <div className="slider">
           <section className="info-section">
-            <h2>{translations[language].apps[currentAppIndex].title}</h2>
-            <p>{translations[language].apps[currentAppIndex].description}</p>
-            {translations[language].apps[currentAppIndex].link && (
-              <a
-                href={translations[language].apps[currentAppIndex].link}
-                className="navigation-link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {language === 'es' ? "Abrir aplicación" : "Open application"}
-              </a>
-            )}
+            <button
+              className="arrow arrow-left"
+              onClick={() =>
+                setCurrentAppIndex((prevIndex) =>
+                  (prevIndex - 1 + translations[language].apps.length) % translations[language].apps.length
+                )
+              }
+            >
+              &lt;
+            </button>
+            <div>
+              <h2>{translations[language].apps[currentAppIndex].title}</h2>
+              <p>{translations[language].apps[currentAppIndex].description}</p>
+              {translations[language].apps[currentAppIndex].link && (
+                <a
+                  href={translations[language].apps[currentAppIndex].link}
+                  className="navigation-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {language === 'es' ? "Abrir aplicación" : "Open application"}
+                </a>
+              )}
+            </div>
+            <button
+              className="arrow arrow-right"
+              onClick={() =>
+                setCurrentAppIndex((prevIndex) =>
+                  (prevIndex + 1) % translations[language].apps.length
+                )
+              }
+            >
+              &gt;
+            </button>
           </section>
-          <button
-            className="arrow arrow-left"
-            onClick={() =>
-              setCurrentAppIndex((prevIndex) =>
-                (prevIndex - 1 + translations[language].apps.length) % translations[language].apps.length
-              )
-            }
-          >
-            &#8592;
-          </button>
-          <button
-            className="arrow arrow-right"
-            onClick={() =>
-              setCurrentAppIndex((prevIndex) =>
-                (prevIndex + 1) % translations[language].apps.length
-              )
-            }
-          >
-            &#8594;
-          </button>
         </div>
       </div>
 

@@ -29,11 +29,10 @@ const Page = () => {
         },
         {
           title: "EXPERIENCIA Y COMPROMISO",
-          subtitle: "",
           content: [
-            "Amplia experiencia en la automatización de interfaces frontend y servicios API",
-            "Comprometido con altos estándares de calidad y las mejores prácticas del sector tecnológico.",
+            "Quality Assurance Engineer con amplia experiencia en la automatización y testing manual de interfaces frontend, mobile y servicios API.",
             "Experiencia en entornos ágiles y DevOps, contribuyendo activamente a la productividad del equipo.",
+            "Participación activa en la implementación y optimización de pipelines de CI/CD."
           ],
         },
       ],
@@ -83,11 +82,10 @@ const Page = () => {
         },
         {
           title: "EXPERIENCE & COMMITMENT",
-          subtitle: "",
           content: [
-            "Extensive experience in automating frontend interfaces and API services.",
-            "Committed to high quality standards and industry best practices in the tech sector.",
-            "Experienced in agile and DevOps environments, actively contributing to team productivity."
+            "Quality Assurance Engineer with extensive experience in automation and manual testing of frontend, mobile interfaces, and API services.",
+            "Experience in agile and DevOps environments, actively contributing to team productivity.",
+            "Active participation in the implementation and optimization of CI/CD pipelines."
           ],
         },
       ],
@@ -147,14 +145,34 @@ const Page = () => {
           <section className="info-section">
             <div>
               <h2 className="section-title">{translations[language].slides[currentSlideIndex].title}</h2>
-              {translations[language].slides[currentSlideIndex].subtitle && (
-                <h3>{translations[language].slides[currentSlideIndex].subtitle}</h3>
-              )}
               <ul>
                 {translations[language].slides[currentSlideIndex].content.map((item, index) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
+
+              {currentSlideIndex === 1 && (
+                <>
+                  <h2 className="section-title">
+                    {language === 'es'
+                      ? "Herramientas de Desarrollo y Automatización"
+                      : "Development and Automation Tools"}
+                  </h2>
+                  <div className="centered-icons">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" title="JavaScript" alt="JavaScript" width="40" height="40"/>&nbsp;
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" title="Python" alt="Python" width="40" height="40"/>&nbsp;
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" title="HTML5" alt="HTML5" width="40" height="40"/>&nbsp;
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" title="PostgreSQL" alt="PostgreSQL" width="40" height="40"/>&nbsp;
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" title="Git" alt="Git" width="40" height="40"/>&nbsp;
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/selenium/selenium-original.svg" title="Selenium" alt="Selenium" width="40" height="40"/>&nbsp;
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/playwright/playwright-original.svg" title="Playwright" alt="Playwright" width="40" height="40"/>&nbsp;
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cypressio/cypressio-original.svg" title="CypressIO" alt="CypressIO" width="40" height="40"/>&nbsp;
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postman/postman-original.svg" title="Postman" alt="Postman" width="40" height="40"/>&nbsp;
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/jenkins/jenkins-original.svg" title="Jenkins" alt="Jenkins" width="40" height="40"/>&nbsp;
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/azuredevops/azuredevops-original.svg" title="Azure DevOps" alt="Azure DevOps" width="40" height="40"/>
+                  </div>
+                </>
+              )}
 
               {/* Mostrar redes sociales solo en la primera slide */}
               {currentSlideIndex === 0 && (

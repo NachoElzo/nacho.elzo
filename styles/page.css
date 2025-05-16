@@ -98,7 +98,7 @@ body {
 }
 
 .info-section li{
-   margin-left: 20px;
+   margin-left: 2px;
 }
 
 .info-section h2 {
@@ -294,5 +294,20 @@ body {
 
 .info-section > .project-icon:first-child {
   margin-top: 2px;
+}
+
+.centered-title {
+  text-align: center;
+  margin-top: 18px;
+  margin-bottom: 10px;
+}
+
+.centered-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 18px;
+  margin-top: 30px;
 }
 

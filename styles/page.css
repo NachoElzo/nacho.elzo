@@ -252,6 +252,8 @@ body {
 @media (max-width: 480px) {
   .social-icons {
     gap: 3px; /* Espaciado mínimo entre íconos */
+    justify-content: flex-start; /* Alinea los íconos a la izquierda */
+    margin-left: 0; /* Elimina el margen izquierdo extra si lo hay */
   }
 
   .social-icons a img {

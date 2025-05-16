@@ -158,7 +158,7 @@ const Page = () => {
                       ? "Herramientas de Desarrollo y Automatización"
                       : "Development and Automation Tools"}
                   </h2>
-                  <div className="centered-icons">
+                  <div className="tools-icons">
                     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" title="JavaScript" alt="JavaScript" width="40" height="40"/>&nbsp;
                     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" title="Python" alt="Python" width="40" height="40"/>&nbsp;
                     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" title="HTML5" alt="HTML5" width="40" height="40"/>&nbsp;

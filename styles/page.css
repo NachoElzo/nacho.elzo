@@ -66,12 +66,6 @@ body {
   text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.2), -1px -1px 5px rgba(255, 255, 255, 0.2); /* Efecto de sombra 3D */
   background: linear-gradient(135deg, #565555, #3a3a3a);
 }
-/* Efecto de hover solo para .dynamic-text-container */
-.dynamic-text-container:hover {
-  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2), 
-              -6px -6px 15px rgba(255, 255, 255, 0.3); /* Profundidad más sutil */
-  transform: scale(1.03); /* Aumentar tamaño */
-}
 
 /* Efecto de cambio de frase */
 .dynamic-text-container span {
@@ -271,6 +265,8 @@ body {
 
     .social-icons {
       gap: 5px; /* Reduce aún más el espacio entre íconos */
+      justify-content: flex-start; /* Alinea los íconos a la izquierda */
+      margin-left: 0; /* Elimina el margen izquierdo extra si lo hay */
     }
 
     .social-icons a img {
@@ -302,12 +298,14 @@ body {
   margin-bottom: 10px;
 }
 
-.centered-icons {
+.tools-icons {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 8px;
   margin-bottom: 18px;
   margin-top: 30px;
+  justify-content: flex-start; /* Alinea los íconos a la izquierda */
+  margin-left: 45px; /* Elimina el margen izquierdo extra si lo hay */
 }
 

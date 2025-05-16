@@ -6,6 +6,18 @@ import { LanguageContext } from './context/LanguageContext';
 import '../styles/page.css';
 import '../styles/form.css';
 
+// Componente reutilizable para los dots
+const Dots = ({ total, current }: { total: number; current: number }) => (
+  <div className="dots-container">
+    {Array.from({ length: total }).map((_, idx) => (
+      <span
+        key={idx}
+        className={`dot${idx === current ? ' active' : ''}`}
+      />
+    ))}
+  </div>
+);
+
 const Page = () => {
   const { language, toggleLanguage } = useContext(LanguageContext);
 
@@ -32,7 +44,7 @@ const Page = () => {
           content: [
             "Quality Assurance Engineer con amplia experiencia en la automatización y testing manual de interfaces frontend, mobile y servicios API.",
             "Experiencia en entornos ágiles y DevOps, contribuyendo activamente a la productividad del equipo.",
-            "Participación activa en la implementación y optimización de pipelines de CI/CD."
+            "Participación activa en la implementación y optimización de pipelines de CI/CD para mejorar la eficiencia del equipo."
           ],
         },
       ],
@@ -85,7 +97,7 @@ const Page = () => {
           content: [
             "Quality Assurance Engineer with extensive experience in automation and manual testing of frontend, mobile interfaces, and API services.",
             "Experience in agile and DevOps environments, actively contributing to team productivity.",
-            "Active participation in the implementation and optimization of CI/CD pipelines."
+            "Active participation in the implementation and optimization of CI/CD pipelines to improve team efficiency."
           ],
         },
       ],
@@ -151,6 +163,7 @@ const Page = () => {
                 ))}
               </ul>
 
+              {/* Título y herramientas solo en la slide de experiencia */}
               {currentSlideIndex === 1 && (
                 <>
                   <h2 className="section-title">
@@ -217,6 +230,8 @@ const Page = () => {
                 </>
               )}
             </div>
+            {/* Dots para las slides */}
+            <Dots total={translations[language].slides.length} current={currentSlideIndex} />
             {/* Flechas debajo del contenido */}
             <div className="arrows-container">
               <button
@@ -266,12 +281,12 @@ const Page = () => {
                       className="project-link-img"
                       src={
                         currentAppIndex === 1
-                          ? "https://img.shields.io/badge/CHECK%20FOR%20VULNERABILITIES-SCANNER-blue?style=for-the-badge&logo=shield"
+                          ? "https://img.shields.io/badge/VULNERABILITY-SCANNER-0074D9?style=for-the-badge&labelColor=22272e&logo=shield"
                           : currentAppIndex === 2
-                            ? "https://img.shields.io/badge/CHECK%20FOR%20ACCESSIBILITY-SCANNER-green?style=for-the-badge&logo=eye"
+                            ? "https://img.shields.io/badge/ACCESSIBILITY-SCANNER-2ECC40?style=for-the-badge&labelColor=22272e&logo=eye"
                             : currentAppIndex === 3
-                              ? "https://img.shields.io/badge/AUTOMATIZALO-PRACTICE-orange?style=for-the-badge&logo=robot"
-                              : "https://img.shields.io/badge/DOCUMENTALO-LEARNING-yellow?style=for-the-badge&logo=document"
+                              ? "https://img.shields.io/badge/AUTOMATIZALO-PRACTICE-orange?style=for-the-badge&labelColor=22272e&logo=robot"
+                              : "https://img.shields.io/badge/DOCUMENTALO-LEARNING-yellow?style=for-the-badge&labelColor=22272e&logo=document"
                       }
                       alt={translations[language].apps[currentAppIndex].title}
                     />
@@ -280,6 +295,8 @@ const Page = () => {
               </div>
               <p>{translations[language].apps[currentAppIndex].description}</p>
             </div>
+            {/* Dots para las apps */}
+            <Dots total={translations[language].apps.length} current={currentAppIndex} />
             {/* Flechas debajo del contenido */}
             <div className="arrows-container">
               <button

@@ -230,34 +230,36 @@ const Page = () => {
           <section className="info-section">
             <div>
               {/* Mostrar un ícono representativo en el primer slide */}
-              {currentAppIndex === 0 ? (
-                <img
-                  className="project-icon"
-                  src="https://img.shields.io/badge/My%20Projects-Section-blue?style=for-the-badge&logo=folder"
-                  alt="My Projects Section"
-                />
-              ) : (
-                /* Mostrar un badge representativo para cada proyecto con enlace */
-                <a
-                  href={translations[language].apps[currentAppIndex].link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+              <div className="project-icon">
+                {currentAppIndex === 0 ? (
                   <img
-                    className="project-icon"
-                    src={
-                      currentAppIndex === 1
-                        ? "https://img.shields.io/badge/Vulnerabilities-Scanner-blue?style=for-the-badge&logo=shield"
-                        : currentAppIndex === 2
-                          ? "https://img.shields.io/badge/Accessibility-Checker-green?style=for-the-badge&logo=eye"
-                          : currentAppIndex === 3
-                            ? "https://img.shields.io/badge/Automation-Practice-orange?style=for-the-badge&logo=robot"
-                            : "https://img.shields.io/badge/Documentation-Learning-yellow?style=for-the-badge&logo=document"
-                    }
-                    alt={translations[language].apps[currentAppIndex].title}
+                    className="my-projects-img"
+                    src="https://img.shields.io/badge/My%20Projects-Section-181717?style=for-the-badge&logo=folder"
+                    alt="My Projects Section"
                   />
-                </a>
-              )}
+                ) : (
+                  <a
+                    href={translations[language].apps[currentAppIndex].link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ marginLeft: 0, display: 'block' }}
+                  >
+                    <img
+                      className="project-link-img"
+                      src={
+                        currentAppIndex === 1
+                          ? "https://img.shields.io/badge/CHECK%20FOR%20VULNERABILITIES-SCANNER-blue?style=for-the-badge&logo=shield"
+                          : currentAppIndex === 2
+                            ? "https://img.shields.io/badge/CHECK%20FOR%20ACCESSIBILITY-SCANNER-green?style=for-the-badge&logo=eye"
+                            : currentAppIndex === 3
+                              ? "https://img.shields.io/badge/AUTOMATIZALO-PRACTICE-orange?style=for-the-badge&logo=robot"
+                              : "https://img.shields.io/badge/DOCUMENTALO-LEARNING-yellow?style=for-the-badge&logo=document"
+                      }
+                      alt={translations[language].apps[currentAppIndex].title}
+                    />
+                  </a>
+                )}
+              </div>
               <p>{translations[language].apps[currentAppIndex].description}</p>
             </div>
             {/* Flechas debajo del contenido */}

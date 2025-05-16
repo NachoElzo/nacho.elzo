@@ -179,12 +179,42 @@ body {
   border-color: #ffffff; /* Cambia el color del borde a blanco al hacer hover */
 }
 .project-icon {
-  position: relative;
-  width: 300px; /* Tamaño inicial de los íconos en resolución máxima */
-  height: 40px; /* Altura fija */
-  border-radius: 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 300px;
+  margin-left: 30px;
+  margin-bottom: 10px;
+  margin-top: 2px; /* Solo 2px para todos, sin !important */
 }
 
+.my-projects-img,
+.project-link-img {
+  width: 300px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid #797979;
+  box-sizing: border-box;
+  display: block;
+  margin: 0; /* Sin margen extra en la imagen */
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.project-link-img:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  border-color: #ffffff;
+}
+
+.project-icon a {
+  margin-left: 0 !important;
+  display: block;
+}
+
+/* Elimina margen extra del párrafo siguiente */
+.project-icon + p {
+  margin-top: 0;
+}
 
 /* Estilos responsivos */
 @media (max-width: 1024px) {
@@ -260,5 +290,9 @@ body {
     width: 80px; /* Tamaño más pequeño para pantallas muy pequeñas */
     height: 30px; /* Ajusta la altura proporcionalmente */
   }
+}
+
+.info-section > .project-icon:first-child {
+  margin-top: 2px;
 }
 

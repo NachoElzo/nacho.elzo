@@ -54,16 +54,6 @@ const Page = () => {
           description: "Usa las flechas para explorar mis aplicaciones.",
         },
         {
-          title: "Testealo - Verificador de Vulnerabilidades",
-          description: "Aplicación para detectar vulnerabilidades en un sitio web.",
-          link: "https://testealo.vercel.app/check-vulnerabilities",
-        },
-        {
-          title: "Testealo - Verificador de Accesibilidad",
-          description: "Aplicación para verificar falta de accesibilidad en un sitio web.",
-          link: "https://testealo.vercel.app/check-accessibility",
-        },
-        {
           title: "Automatizando",
           description: "Aplicación para practicar automatización.",
           link: "https://automatizando.vercel.app/",
@@ -105,16 +95,6 @@ const Page = () => {
         {
           title: "MY PROJECTS",
           description: "Use the arrows to explore my applications.",
-        },
-        {
-          title: "Testealo - Vulnerability Checker",
-          description: "Application to detect vulnerabilities on a website.",
-          link: "https://testealo.vercel.app/check-vulnerabilities",
-        },
-        {
-          title: "Testealo - Accessibility Checker",
-          description: "Application to check for a lack of accessibility on websites.",
-          link: "https://testealo.vercel.app/check-accessibility",
         },
         {
           title: "Automatizando",
@@ -262,15 +242,15 @@ const Page = () => {
         <div className="slider">
           <section className="info-section">
             <div>
-              {/* Mostrar un ícono representativo en el primer slide */}
               <div className="project-icon">
-                {currentAppIndex === 0 ? (
+                {currentAppIndex === 0 && (
                   <img
                     className="my-projects-img"
                     src="https://img.shields.io/badge/My%20Projects-Section-181717?style=for-the-badge&logo=folder"
                     alt="My Projects Section"
                   />
-                ) : (
+                )}
+                {currentAppIndex === 1 && (
                   <a
                     href={translations[language].apps[currentAppIndex].link}
                     target="_blank"
@@ -279,15 +259,21 @@ const Page = () => {
                   >
                     <img
                       className="project-link-img"
-                      src={
-                        currentAppIndex === 1
-                          ? "https://img.shields.io/badge/VULNERABILITY-SCANNER-0074D9?style=for-the-badge&labelColor=22272e&logo=shield"
-                          : currentAppIndex === 2
-                            ? "https://img.shields.io/badge/ACCESSIBILITY-SCANNER-2ECC40?style=for-the-badge&labelColor=22272e&logo=eye"
-                            : currentAppIndex === 3
-                              ? "https://img.shields.io/badge/AUTOMATIZALO-PRACTICE-orange?style=for-the-badge&labelColor=22272e&logo=robot"
-                              : "https://img.shields.io/badge/DOCUMENTALO-LEARNING-yellow?style=for-the-badge&labelColor=22272e&logo=document"
-                      }
+                      src="https://img.shields.io/badge/AUTOMATIZALO-PRACTICE-orange?style=for-the-badge&labelColor=22272e&logo=robot"
+                      alt={translations[language].apps[currentAppIndex].title}
+                    />
+                  </a>
+                )}
+                {currentAppIndex === 2 && (
+                  <a
+                    href={translations[language].apps[currentAppIndex].link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ marginLeft: 0, display: 'block' }}
+                  >
+                    <img
+                      className="project-link-img"
+                      src="https://img.shields.io/badge/DOCUMENTALO-LEARNING-yellow?style=for-the-badge&labelColor=22272e&logo=document"
                       alt={translations[language].apps[currentAppIndex].title}
                     />
                   </a>
@@ -295,9 +281,7 @@ const Page = () => {
               </div>
               <p>{translations[language].apps[currentAppIndex].description}</p>
             </div>
-            {/* Dots para las apps */}
             <Dots total={translations[language].apps.length} current={currentAppIndex} />
-            {/* Flechas debajo del contenido */}
             <div className="arrows-container">
               <button
                 className="arrow arrow-left"

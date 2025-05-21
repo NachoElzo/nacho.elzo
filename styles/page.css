@@ -21,7 +21,7 @@ body {
 .language-toggle {
   position: absolute;
   top: 15px;
-  left: 25px;
+  left: 22px;
   font-size: 16px;
   padding: 4px 8px;
   background-color:  rgb(239, 11, 11);
@@ -63,8 +63,8 @@ body {
   justify-content: center;
   text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.2), -1px -1px 5px rgba(255, 255, 255, 0.2); /* Efecto de sombra 3D */
   background: linear-gradient(135deg, #565555, #3a3a3a);
-  margin-bottom: -1px !important;
-  margin-top: 0px !important;
+  margin-bottom: -15px !important;
+  margin-top: 3px !important;
 }
 
 /* Efecto de cambio de frase */
@@ -333,14 +333,13 @@ body {
 /* Celular mediano */
 @media (max-width: 480px) {
     .social-icons {
-      gap: 1px; /* Reduce aún más el espacio entre íconos */
+      gap: 2px; /* Reduce aún más el espacio entre íconos */
       justify-content: flex-start; /* Alinea los íconos a la izquierda */
-      margin-left: -5px; /* Elimina el margen izquierdo extra si lo hay */
     }
 
     .social-icons a img {
-      max-width: 65px; /* Tamaño más pequeño para pantallas medianas */
-      max-height: 30px; /* Ajusta la altura proporcionalmente */
+      max-width: 75px; /* Tamaño más pequeño para pantallas medianas */
+      max-height: 35px; /* Ajusta la altura proporcionalmente */
     }
 
 }

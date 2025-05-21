@@ -337,5 +337,13 @@ body {
       margin-left: 0px;
   }
 }
+@media (max-width: 480px) {
+  .social-icons {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-
+}

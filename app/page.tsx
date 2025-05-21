@@ -210,10 +210,7 @@ const Page = () => {
                 </>
               )}
             </div>
-            {/* Dots para las slides */}
-            <Dots total={translations[language].slides.length} current={currentSlideIndex} />
-            {/* Flechas debajo del contenido */}
-            <div className="arrows-container">
+            <div className="slider-controls">
               <button
                 className="arrow arrow-left"
                 onClick={() =>
@@ -224,6 +221,7 @@ const Page = () => {
               >
                 &laquo;
               </button>
+              <Dots total={translations[language].slides.length} current={currentSlideIndex} />
               <button
                 className="arrow arrow-right"
                 onClick={() =>
@@ -232,9 +230,6 @@ const Page = () => {
               >
                 &raquo;
               </button>
-              <div className="mobile-slice-indicator">
-                {language === 'es' ? 'Desliza para ver más' : 'Swipe to see more'}
-              </div>
             </div>
           </section>
         </div>
@@ -284,26 +279,23 @@ const Page = () => {
               </div>
               <p>{translations[language].apps[currentAppIndex].description}</p>
             </div>
-            <Dots total={translations[language].apps.length} current={currentAppIndex} />
-            <div className="arrows-container">
+            <div className="slider-controls">
               <button
                 className="arrow arrow-left"
                 onClick={() =>
-                  setCurrentAppIndex(
-                    (prevIndex) =>
-                      (prevIndex - 1 + translations[language].apps.length) %
-                      translations[language].apps.length
+                  setCurrentAppIndex((prevIndex) =>
+                    (prevIndex - 1 + translations[language].apps.length) % translations[language].apps.length
                   )
                 }
               >
                 &laquo;
               </button>
+              <Dots total={translations[language].apps.length} current={currentAppIndex} />
               <button
                 className="arrow arrow-right"
                 onClick={() =>
-                  setCurrentAppIndex(
-                    (prevIndex) =>
-                      (prevIndex + 1) % translations[language].apps.length
+                  setCurrentAppIndex((prevIndex) =>
+                    (prevIndex + 1) % translations[language].apps.length
                   )
                 }
               >

@@ -19,7 +19,7 @@ body {
 }
 /* Botón para cambiar idioma en Page */
 .language-toggle {
-  position: fixed;
+  position: absolute;
   top: 15px;
   left: 25px;
   font-size: 16px;
@@ -63,7 +63,7 @@ body {
   justify-content: center;
   text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.2), -1px -1px 5px rgba(255, 255, 255, 0.2); /* Efecto de sombra 3D */
   background: linear-gradient(135deg, #565555, #3a3a3a);
-  margin-bottom: -10px !important;
+  margin-bottom: -1px !important;
   margin-top: 0px !important;
 }
 
@@ -328,4 +328,19 @@ body {
     .language-toggle {
       margin-left: 0px;
   }
+}
+
+/* Celular mediano */
+@media (max-width: 480px) {
+    .social-icons {
+      gap: 1px; /* Reduce aún más el espacio entre íconos */
+      justify-content: flex-start; /* Alinea los íconos a la izquierda */
+      margin-left: -5px; /* Elimina el margen izquierdo extra si lo hay */
+    }
+
+    .social-icons a img {
+      max-width: 65px; /* Tamaño más pequeño para pantallas medianas */
+      max-height: 30px; /* Ajusta la altura proporcionalmente */
+    }
+
 }

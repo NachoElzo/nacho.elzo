@@ -160,6 +160,7 @@
 
 @media (max-width: 768px) {
   .form-container{
+    margin-top: -10px;
     height: auto;
   }
   .form-group input,

@@ -230,6 +230,7 @@ body {
     padding: 10px; /* Reducir padding */
     width: 100%; /* Ocupa todo el ancho */
     margin: 20px auto; /* Ajustar márgenes */
+    margin-top: -1px;
   }
 
     .dynamic-text-container {
@@ -276,6 +277,10 @@ body {
 }
 
 @media (max-width: 480px) {
+
+  .language-toggle {
+    margin-left: 0px;
+  }
   .social-icons {
     gap: 3px; /* Espaciado mínimo entre íconos */
     justify-content: flex-start; /* Alinea los íconos a la izquierda */
@@ -329,4 +334,46 @@ body {
 
 .dot.active {
   background: #fff;
+}
+
+.my-projects-img,
+.project-link-img {
+  width: 99%;
+  height: auto;      /* Mantiene la proporción */
+  margin-top: 4px;  
+  margin-left: -30px;
+  
+}
+
+.mobile-slice-indicator {
+  display: none;
+  text-align: center;
+  font-size: 1rem;
+  color: #bbb;
+  margin-top: 10px;
+  font-family: 'Georama', sans-serif;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 480px) {
+  .arrow {
+    opacity: 0 !important;
+  }
+  .mobile-slice-indicator {
+    display: block;
+  }
+}
+
+.info-section li{
+   margin-left: -20px;
+}
+
+.dynamic-text-container {
+  height: auto;
+  font-size: 0.9rem;   /* Más pequeño que el valor por defecto */
+  padding: 4px 8px;    /* Menos padding */
+}
+
+.section-title{
+  margin-left: 5px !important;
 }

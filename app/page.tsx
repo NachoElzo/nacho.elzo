@@ -232,6 +232,9 @@ const Page = () => {
               >
                 &raquo;
               </button>
+              <div className="mobile-slice-indicator">
+                {language === 'es' ? 'Desliza para ver más' : 'Swipe to see more'}
+              </div>
             </div>
           </section>
         </div>

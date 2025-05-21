@@ -152,12 +152,14 @@
 
 @media (max-width: 768px) {
   .form-container {
-    position: relative;
-    width: 100%;
-    margin-left: 10px;
-    margin-top: 20px;
-    max-height: 100vh; /* Evita que se expanda demasiado en pantallas pequeñas */
-    padding: 5px;
+    position: static !important;  /* O elimina la propiedad position */
+    width: 100% !important;
+    max-height: none !important;
+    padding: 5px !important;
+    top: auto !important;
+    right: auto !important;
+    left: auto !important;
+    z-index: auto !important;
+    overflow: visible !important;
   }
 }
-

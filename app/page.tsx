@@ -170,7 +170,7 @@ const Page = () => {
               {/* Mostrar redes sociales solo en la primera slide */}
               {currentSlideIndex === 0 && (
                 <>
-                  <h2 className="section-title">{language === 'es' ? "Mis Redes" : "My Networks"}</h2>
+                  <h2 className="section-title">{language === 'es' ? "MIS REDES" : "MY NETWORKS"}</h2>
                   <div className="social-icons">
                     <a
                       id="linkedin"

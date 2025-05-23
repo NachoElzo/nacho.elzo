@@ -257,7 +257,7 @@ const Page = () => {
                   >
                     <img
                       className="project-link-img"
-                      src="https://img.shields.io/badge/AUTOMATIZALO-PRACTICE-orange?style=for-the-badge&labelColor=22272e&logo=robot"
+                      src="https://img.shields.io/badge/AUTOMATIZANDO-PRACTICE-orange?style=for-the-badge&labelColor=22272e&logo=robot"
                       alt={translations[language].apps[currentAppIndex].title}
                     />
                   </a>

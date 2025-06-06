@@ -161,7 +161,7 @@ body {
 /* Configuración por defecto para pantallas grandes */
 .social-icons {
   display: flex; /* Usa flexbox para alinear los íconos horizontalmente */
-  justify-content:right; /* Centra los íconos horizontalmente */
+  justify-content: right; /* Centra los íconos horizontalmente */
   margin: 30px auto; /* Espaciado superior e inferior */
   padding: 0; /* Elimina cualquier padding adicional */
   max-width: 50px; /* Limita el ancho máximo del contenedor */
@@ -337,50 +337,22 @@ body {
 
 /* Celular mediano */
 @media (max-width: 480px) {
-    .social-icons {
-      gap: 2px; /* Reduce aún más el espacio entre íconos */
-      justify-content: flex-start; /* Alinea los íconos a la izquierda */
-    }
-
-    .social-icons a img {
-      max-width: 75px; /* Tamaño más pequeño para pantallas medianas */
-      max-height: 35px; /* Ajusta la altura proporcionalmente */
-      margin-left: 0px !important;
-    }
-
-}
-
-/* Celular mediano */
-@media (max-width: 350px) {
-      .social-icons {
-      gap: 30px; /* Reduce aún más el espacio entre íconos */
-    }
-    .social-icons a img {
-      margin-left: -30px !important;
-    }
-
-}
-
-.project-icon-img {
-  border: 2px solid #797979;
-  border-radius: 5px;
-  max-width: 40px; /* Ajusta este valor */
-  max-height: 40px; /* Ajusta este valor */
-}
-
-/* Media query para pantallas más pequeñas */
-@media (max-width: 768px) {
-  .project-icon-img {
-    border: 1px solid #797979;
-    border-radius: 3px;
+  .social-icons {
+    gap: 2px; /* Reduce aún más el espacio entre íconos */
+    justify-content: flex-start; /* Alinea los íconos a la izquierda */
   }
-}
 
-/* Media query para pantallas aún más pequeñas */
-@media (max-width: 480px) {
-  .project-icon-img {
-    border: none; /* Elimina el borde en pantallas muy pequeñas */
-    border-radius: 0;
+  .social-icons a img {
+    max-width: 60px; /* Ajusta este valor */
+    max-height: 35px; /* Ajusta la altura proporcionalmente */
+    border: none; /* Elimina el borde en móvil */
+    border-radius: 0; /* Elimina el border-radius en móvil */
+  }
+
+  .language-toggle {
+    margin-bottom: 10px; /* Agrega un margen inferior */
+    bottom: auto; /* Elimina el bottom */
+    top: 10px; /* Ajusta la posición superior */
   }
 }
 
@@ -391,21 +363,8 @@ body {
     gap: 4px; /* Reduce el espacio entre iconos */
   }
   .social-icons a img {
-    max-width: 32px; /* Reduce el tamaño de los iconos */
-    max-height: 32px;
-  }
-  /* ... otros ajustes ... */
-}
-
-/* iPhone 5 y dispositivos con ancho similar */
-@media (max-width: 320px) {
-  /* Ajustes para el diseño */
-  .social-icons {
-    gap: 2px; /* Reduce aún más el espacio */
-  }
-  .social-icons a img {
-    max-width: 28px; /* Reduce aún más el tamaño */
-    max-height: 28px;
+    max-width: 32px; /* Ajusta este valor */
+    max-height: 35px; /* Ajusta la altura proporcionalmente */
   }
   /* ... otros ajustes ... */
 }

@@ -279,6 +279,10 @@ body {
     font-size: 0.9rem; /* Reducir tamaño de texto */
   }
 
+  .social-icons {
+    margin-left: 0 !important;
+    justify-content: flex-start;
+  }
 }
 
 /* Celular mediano */
@@ -323,7 +327,7 @@ body {
     .social-icons {
       gap: 8px; /* Reduce aún más el espacio entre íconos */
       justify-content: flex-start; /* Alinea los íconos a la izquierda */
-      margin-left: 25px; /* Elimina el margen izquierdo extra si lo hay */
+      margin-left: 0; /* Elimina completamente el margen izquierdo */
     }
 
     .social-icons a img {
@@ -341,11 +345,12 @@ body {
   .social-icons {
     gap: 6px;
     justify-content: flex-start;
+    margin-left: 0; /* Asegura que no haya margen izquierdo */
   }
 
   .social-icons a img {
-    max-width: 90px;    /* Más grande */
-    max-height: 38px;   /* Más alto */
+    max-width: 90px;
+    max-height: 44px;   /* Un poco más alto */
     border-radius: 5px;
     border: none;
   }
@@ -361,10 +366,11 @@ body {
 @media (max-width: 375px) {
   .social-icons {
     gap: 5px;
+    margin-left: 0; /* Asegura que no haya margen izquierdo */
   }
   .social-icons a img {
-    max-width: 70px;    /* Más grande */
-    max-height: 32px;   /* Más alto */
+    max-width: 70px;
+    max-height: 38px;   /* Un poco más alto */
     border-radius: 5px;
     border: none;
   }

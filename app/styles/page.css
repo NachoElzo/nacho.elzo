@@ -21,10 +21,11 @@ body {
 .language-toggle {
   position: absolute;
   top: 15px;
-  left: 22px;
+  right: 22px;      /* Cambia left por right */
+  left: auto;       /* Asegura que left no interfiera */
   font-size: 16px;
   padding: 4px 8px;
-  background-color:  rgb(239, 11, 11);
+  background-color: rgb(239, 11, 11);
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -33,7 +34,7 @@ body {
   width: auto;
   display: inline-block;
   max-width: fit-content;
-  margin-left: 30px;
+  margin-left: 0;   /* Elimina margen izquierdo */
 }
 
 
@@ -338,33 +339,33 @@ body {
 /* Celular mediano */
 @media (max-width: 480px) {
   .social-icons {
-    gap: 2px; /* Reduce aún más el espacio entre íconos */
-    justify-content: flex-start; /* Alinea los íconos a la izquierda */
+    gap: 6px;
+    justify-content: flex-start;
   }
 
   .social-icons a img {
-    max-width: 60px; /* Ajusta este valor */
-    max-height: 35px; /* Ajusta la altura proporcionalmente */
-    border: none; /* Elimina el borde en móvil */
-    border-radius: 0; /* Elimina el border-radius en móvil */
+    max-width: 90px;    /* Más grande */
+    max-height: 38px;   /* Más alto */
+    border-radius: 5px;
+    border: none;
   }
 
   .language-toggle {
-    margin-bottom: 10px; /* Agrega un margen inferior */
-    bottom: auto; /* Elimina el bottom */
-    top: 10px; /* Ajusta la posición superior */
+    margin-bottom: 10px;
+    bottom: auto;
+    top: 10px;
   }
 }
 
 /* iPhone SE y dispositivos con ancho similar */
 @media (max-width: 375px) {
-  /* Ajustes para el diseño */
   .social-icons {
-    gap: 4px; /* Reduce el espacio entre iconos */
+    gap: 5px;
   }
   .social-icons a img {
-    max-width: 32px; /* Ajusta este valor */
-    max-height: 35px; /* Ajusta la altura proporcionalmente */
+    max-width: 70px;    /* Más grande */
+    max-height: 32px;   /* Más alto */
+    border-radius: 5px;
+    border: none;
   }
-  /* ... otros ajustes ... */
 }

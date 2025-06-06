@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Georama:wght@400;600;700&display=swap');
-@import './page.css';
+@import "../styles/page.css";
 
 /* Contenedor del formulario: Fija el panel en el lateral y lo hace scrollable */
 .form-container {
-  margin-top: 39px;
+  margin-top: 41px;
   position: fixed;
   top: 10px;
   right: 10px;

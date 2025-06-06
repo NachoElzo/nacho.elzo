@@ -3,8 +3,8 @@
 import { useState, useContext } from 'react';
 import { sendFormData } from './resources/api/form';
 import { LanguageContext } from './context/LanguageContext';
-import '../styles/form.css';
-import '../styles/page.css';
+import './styles/form.css';
+import './styles/page.css';
 
 const translations = {
   es: {

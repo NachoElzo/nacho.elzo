@@ -3,8 +3,8 @@
 import { useEffect, useState, useContext } from 'react';
 import Form from './form';
 import { LanguageContext } from './context/LanguageContext';
-import '../styles/page.css';
-import '../styles/form.css';
+import './styles/page.css';
+import './styles/form.css';
 
 // Componente reutilizable para los dots
 const Dots = ({ total, current }: { total: number; current: number }) => (

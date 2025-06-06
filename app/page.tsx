@@ -189,6 +189,7 @@ const Page = () => {
                       rel="noopener noreferrer"
                     >
                       <img
+                        className="project-icon-img"
                         src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white"
                         alt="LinkedIn"
                       />
@@ -200,6 +201,7 @@ const Page = () => {
                       rel="noopener noreferrer"
                     >
                       <img
+                        className="project-icon-img"  // Agrega esta clase
                         src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"
                         alt="GitHub"
                       />
@@ -212,6 +214,7 @@ const Page = () => {
                       rel="noopener noreferrer"
                     >
                       <img
+                        className="project-icon-img"  // Agrega esta clase
                         src="https://img.shields.io/badge/Download%20CV-green?style=for-the-badge&logo=adobeacrobatreader&logoColor=white"
                         alt="Download CV"
                       />

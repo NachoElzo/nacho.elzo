@@ -360,3 +360,52 @@ body {
     }
 
 }
+
+.project-icon-img {
+  border: 2px solid #797979;
+  border-radius: 5px;
+  max-width: 40px; /* Ajusta este valor */
+  max-height: 40px; /* Ajusta este valor */
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .project-icon-img {
+    border: 1px solid #797979;
+    border-radius: 3px;
+  }
+}
+
+/* Media query para pantallas aún más pequeñas */
+@media (max-width: 480px) {
+  .project-icon-img {
+    border: none; /* Elimina el borde en pantallas muy pequeñas */
+    border-radius: 0;
+  }
+}
+
+/* iPhone SE y dispositivos con ancho similar */
+@media (max-width: 375px) {
+  /* Ajustes para el diseño */
+  .social-icons {
+    gap: 4px; /* Reduce el espacio entre iconos */
+  }
+  .social-icons a img {
+    max-width: 32px; /* Reduce el tamaño de los iconos */
+    max-height: 32px;
+  }
+  /* ... otros ajustes ... */
+}
+
+/* iPhone 5 y dispositivos con ancho similar */
+@media (max-width: 320px) {
+  /* Ajustes para el diseño */
+  .social-icons {
+    gap: 2px; /* Reduce aún más el espacio */
+  }
+  .social-icons a img {
+    max-width: 28px; /* Reduce aún más el tamaño */
+    max-height: 28px;
+  }
+  /* ... otros ajustes ... */
+}

@@ -19,7 +19,7 @@ body {
 }
 /* Botón para cambiar idioma en Page */
 .language-toggle {
-  position: absolute;
+  position: fixed;
   top: 15px;
   right: 22px;      /* Cambia left por right */
   left: auto;       /* Asegura que left no interfiera */

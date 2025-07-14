@@ -54,11 +54,6 @@ const Page = () => {
           description: "Usa las flechas para explorar mis aplicaciones.",
         },
         {
-          title: "Centinelas",
-          description: "Scanner de vulnerabilidades y accesibilidad para proteger y mejorar tu web.",
-          link: "https://centinelas.vercel.app/", // Reemplaza con el link real
-        },
-        {
           title: "Automatizando",
           description: "Aplicación hecha para mis colegas testers para practicar automatización.",
           link: "https://automatizando.vercel.app/",
@@ -100,11 +95,6 @@ const Page = () => {
         {
           title: "MY PROJECTS",
           description: "Use the arrows to explore my applications.",
-        },
-        {
-          title: "Centinelas",
-          description: "Vulnerability and accessibility scanner to protect and improve your web.",
-          link: "https://centinelas.vercel.app/", // Replace with the actual link
         },
         {
           title: "Automatizando",
@@ -270,26 +260,12 @@ const Page = () => {
                   >
                     <img
                       className="project-link-img"
-                      src="https://img.shields.io/badge/CENTINELAS-SECURITY-green?style=for-the-badge&labelColor=22272e&logo=security"
-                      alt={translations[language].apps[currentAppIndex].title}
-                    />
-                  </a>
-                )}
-                {currentAppIndex === 2 && (
-                  <a
-                    href={translations[language].apps[currentAppIndex].link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{ marginLeft: 0, display: 'block' }}
-                  >
-                    <img
-                      className="project-link-img"
                       src="https://img.shields.io/badge/AUTOMATIZANDO-PRACTICE-orange?style=for-the-badge&labelColor=22272e&logo=robot"
                       alt={translations[language].apps[currentAppIndex].title}
                     />
                   </a>
                 )}
-                {currentAppIndex === 3 && (
+                {currentAppIndex === 2 && (
                   <a
                     href={translations[language].apps[currentAppIndex].link}
                     target="_blank"
